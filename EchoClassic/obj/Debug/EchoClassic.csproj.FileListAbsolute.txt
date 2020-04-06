@@ -485,3 +485,6 @@ D:\RaushanGitHub\Echo\EchoClassic\bin\zh-TW\Hangfire.Core.resources.dll
 D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.csprojResolveAssemblyReference.cache
 D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.dll
 D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.pdb
+D:\RaushanGitHub\Echo\EchoClassic\bin\SendGrid.dll
+D:\RaushanGitHub\Echo\EchoClassic\bin\SendGrid.pdb
+D:\RaushanGitHub\Echo\EchoClassic\bin\SendGrid.xml

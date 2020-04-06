@@ -21,6 +21,8 @@ using System.ServiceModel.Web;
 using System.Net;
 using System.Threading;
 using System.Web.Script.Serialization;
+using SendGrid;
+using Newtonsoft.Json;
 
 namespace EchoClassic
 {
@@ -337,10 +339,6 @@ namespace EchoClassic
                             IsReply = Convert.ToInt32(item.StringData.Replace("\r", "").Trim());
 
                         }
-
-
-
-
                     }
                     if (parser.FileContents!=null)
                     {
@@ -384,15 +382,53 @@ namespace EchoClassic
                     n.IsSms = IsSms;
                     n.IsReply = IsReply;
                 }
-
-
+                SendMail(UserIDList);
             }
             catch (Exception ex)
             {
-
                 n= null;
             }
             return n;
+        }
+        public async void SendMail(IList<string> UserIDList)
+        {
+            var apiKey = "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";// Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
+            var client = new SendGridClient(apiKey);
+
+            if (UserIDList != null)
+            {
+                foreach (string UserID in UserIDList)
+                {
+                    string data = @"{
+              'personalizations': [
+                {
+                  'to': [
+                    {
+                      'email': 'Raushan790@gmail.com'
+                    }
+                  ],
+                  'subject': 'Hello World from the Twilio SendGrid C# Library!'
+                }
+              ],
+              'from': {
+                'email': 'Raushan790@gmail.com'
+              },
+              'content': [
+                {
+                  'type': 'text/plain',
+                  'value': 'Hello, Email!'
+                }
+              ]
+            }";
+                    Object json = JsonConvert.DeserializeObject<Object>(data);
+                    var response = await client.RequestAsync(SendGridClient.Method.POST, json.ToString(), urlPath: "mail/send");
+                    Console.WriteLine(response.StatusCode);
+                    Console.WriteLine(response.Headers);
+                    Console.WriteLine("\n\nPress <Enter> to continue.");
+                    Console.ReadLine();
+                }
+
+            }
         }
         public int DeleteNotice(int NoticeID)
         {

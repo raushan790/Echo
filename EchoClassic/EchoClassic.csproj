@@ -125,6 +125,10 @@
       <HintPath>..\packages\Razorpay.3.0.0\lib\net45\Razorpay.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SendGrid, Version=9.13.2.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\SendGrid.9.13.2\lib\net452\SendGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SparkPost, Version=1.14.0.25860, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SparkPost.1.14.0\lib\net45\SparkPost.dll</HintPath>
       <Private>True</Private>
@@ -1081,6 +1085,9 @@
       <Project>{14ed610f-fe82-4741-80f6-25f77d433ee7}</Project>
       <Name>DataObjects</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
