@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29324.140
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Layers", "Layers", "{D21B86D9-C362-47E6-A2AB-A4C069F55588}"
 EndProject
@@ -26,6 +26,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerExeForAutomatedJobs", "ServerExeForAutomatedJobs\ServerExeForAutomatedJobs.csproj", "{22294836-D04E-41A7-9A1B-BB863D092831}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ServerSetupForAutomatedJobs", "ServerSetupForAutomatedJobs\ServerSetupForAutomatedJobs.vdproj", "{1AB25BB5-90AA-4861-8D9D-76927C2D0A30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostManCollection", "PostManCollection", "{2B875F04-1C5B-48AB-9D9A-20B623BD1407}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\SCHOOL\Desktop\EchoCollection.postman_collection.json = C:\Users\SCHOOL\Desktop\EchoCollection.postman_collection.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

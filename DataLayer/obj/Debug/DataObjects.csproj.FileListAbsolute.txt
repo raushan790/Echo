@@ -217,3 +217,10 @@ C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\DataLayer\obj\Debug\Dat
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\DataLayer\obj\Debug\DataObjects.csproj.CopyComplete
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\DataLayer\obj\Debug\DataObjects.dll
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\DataLayer\obj\Debug\DataObjects.pdb
+D:\RaushanGitHub\Echo\DataLayer\bin\Debug\DataObjects.dll
+D:\RaushanGitHub\Echo\DataLayer\bin\Debug\DataObjects.pdb
+D:\RaushanGitHub\Echo\DataLayer\bin\Debug\BusinessObjects.dll
+D:\RaushanGitHub\Echo\DataLayer\bin\Debug\BusinessObjects.pdb
+D:\RaushanGitHub\Echo\DataLayer\obj\Debug\DataObjects.csprojResolveAssemblyReference.cache
+D:\RaushanGitHub\Echo\DataLayer\obj\Debug\DataObjects.dll
+D:\RaushanGitHub\Echo\DataLayer\obj\Debug\DataObjects.pdb
