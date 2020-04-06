@@ -1,0 +1,17 @@
+@UserID	nvarchar(50)
+,@DeviceToken	nvarchar(250)
+,@Platform	nvarchar(20)
+,@CreateDate	datetime
+,@ModifiedDate	datetime
+,@Custom1	nvarchar(50)
+,@Custom2	nvarchar(100)
+,@Custom3	nvarchar(150)
+
+ string UserID
+,string DeviceToken
+,string Platform
+,DateTime CreateDate
+,DateTime ModifiedDate
+,string Custom1
+,string Custom2
+,string Custom3

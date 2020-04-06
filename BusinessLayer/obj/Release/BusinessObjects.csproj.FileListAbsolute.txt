@@ -1,0 +1,5 @@
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\bin\Release\BusinessObjects.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\bin\Release\BusinessObjects.pdb
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\obj\Release\BusinessObjects.csprojResolveAssemblyReference.cache
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\obj\Release\BusinessObjects.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\obj\Release\BusinessObjects.pdb

@@ -1,0 +1,2 @@
+2019-09-27 09:43:48,278 [10] ERROR Log4NetTest.frmMain - Application started
+2019-09-27 09:44:33,228 [9] INFO Log4NetTest.frmMain - Application started

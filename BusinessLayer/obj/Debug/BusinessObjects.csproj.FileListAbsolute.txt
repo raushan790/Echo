@@ -1,0 +1,150 @@
+D:\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Projects\LPLatestByDilip\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Projects\LPLatestByDilip\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Projects\LPLatestByDilip\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\LPLatestByDilip\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Projects\LPLatestByDilip\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Projects\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Projects\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Projects\Minx\Project\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Projects\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Project\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Project\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Project\Minx\Project\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Project\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\HCL45(24-1-2011)\Projects\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\HCL45(24-1-2011)\Projects\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\HCL45(24-1-2011)\Projects\Minx\Project\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\HCL45(24-1-2011)\Projects\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\HCL45(24-1-2011)\Projects\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\WorkingProjects\Minx\Minx\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\WorkingProjects\Minx\Minx\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\WorkingProjects\Minx\Minx\Minx\Project\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\WorkingProjects\Minx\Minx\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\WorkingProjects\Minx\Minx\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\WorkingProjects\Minx\Minx\LatestWithGallery\Project\Project\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\WorkingProjects\Minx\Minx\LatestWithGallery\Project\Project\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\WorkingProjects\Minx\Minx\LatestWithGallery\Project\Project\Project\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\WorkingProjects\Minx\Minx\LatestWithGallery\Project\Project\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\WorkingProjects\Minx\Minx\LatestWithGallery\Project\Project\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+C:\Users\HCL\Desktop\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+C:\Users\HCL\Desktop\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+C:\Users\HCL\Desktop\Minx\Project\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HCL\Desktop\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+C:\Users\HCL\Desktop\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\WorkingProjects\Minx\16thApril\Minx\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\WorkingProjects\Minx\16thApril\Minx\Minx\Project\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\WorkingProjects\Minx\16thApril\Minx\Minx\Project\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\WorkingProjects\Minx\16thApril\Minx\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\WorkingProjects\Minx\16thApril\Minx\Minx\Project\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\WorkingProjects\28thAprilMinx\Latest\minx\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\WorkingProjects\28thAprilMinx\Latest\minx\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\WorkingProjects\28thAprilMinx\Latest\minx\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\WorkingProjects\28thAprilMinx\Latest\minx\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\WorkingProjects\28thAprilMinx\Latest\minx\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\HCL45(24-1-2011)\Projects\minx\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\HCL45(24-1-2011)\Projects\minx\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\HCL45(24-1-2011)\Projects\minx\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\HCL45(24-1-2011)\Projects\minx\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\HCL45(24-1-2011)\Projects\minx\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+C:\DemoEcommerce\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+C:\DemoEcommerce\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+C:\DemoEcommerce\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\DemoEcommerce\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+C:\DemoEcommerce\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Ferhan\ADI\ADI\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Ferhan\ADI\ADI\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Ferhan\ADI\ADI\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Ferhan\ADI\ADI\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Ferhan\ADI\ADI\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Sachin Dot Net\PROJECTS\ADI\ADI\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Sachin Dot Net\PROJECTS\ADI\ADI\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Sachin Dot Net\PROJECTS\ADI\ADI\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Sachin Dot Net\PROJECTS\ADI\ADI\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Sachin Dot Net\PROJECTS\ADI\ADI\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\PROJECTS\ADI\ADI\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\PROJECTS\ADI\ADI\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\PROJECTS\ADI\ADI\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\PROJECTS\ADI\ADI\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\PROJECTS\ADI\ADI\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\WorkingProjects\PetPlus\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\WorkingProjects\PetPlus\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\WorkingProjects\PetPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\WorkingProjects\PetPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\WorkingProjects\PetPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Sachin Dot Net\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Sachin Dot Net\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Sachin Dot Net\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Sachin Dot Net\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Sachin Dot Net\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\WorkingProjects\PetPlus\24OCT\PetsPlus\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\WorkingProjects\PetPlus\24OCT\PetsPlus\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\WorkingProjects\PetPlus\24OCT\PetsPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\WorkingProjects\PetPlus\24OCT\PetsPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\WorkingProjects\PetPlus\24OCT\PetsPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\WorkingProjects\PetPlus\Latest\PetsPlus\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\WorkingProjects\PetPlus\Latest\PetsPlus\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\WorkingProjects\PetPlus\Latest\PetsPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\WorkingProjects\PetPlus\Latest\PetsPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\WorkingProjects\PetPlus\Latest\PetsPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\AllProjects\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\AllProjects\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\AllProjects\PetsPlus\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\AllProjects\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\AllProjects\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+E:\Sachin Dot Net Developer\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+E:\Sachin Dot Net Developer\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+E:\Sachin Dot Net Developer\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Sachin Dot Net Developer\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+E:\Sachin Dot Net Developer\PROJECTS\PETSPLUS\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Shashi Bhan\Projects\PetsPlus\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Shashi Bhan\Projects\PetsPlus\PetsPlus\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Shashi Bhan\Projects\PetsPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Shashi Bhan\Projects\PetsPlus\PetsPlus\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Shashi Bhan\Projects\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Shashi Bhan\Projects\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Shashi Bhan\Projects\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Shashi Bhan\Projects\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Shashi Bhan\Projects\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\obj\Debug\BusinessObjects.csprojResolveAssemblyReference.cache
+E:\Dharmendra\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+E:\Dharmendra\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+E:\Dharmendra\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Dharmendra\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+E:\Dharmendra\ForChandrashekhar\HelloPunditji\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+E:\Dharmendra\16 March\HelloPunditji1\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+E:\Dharmendra\16 March\HelloPunditji1\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+E:\Dharmendra\16 March\HelloPunditji1\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Dharmendra\16 March\HelloPunditji1\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+E:\Dharmendra\16 March\HelloPunditji1\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+E:\Dharmendra\17 March\HelloPunditji1\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+E:\Dharmendra\17 March\HelloPunditji1\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+E:\Dharmendra\17 March\HelloPunditji1\Layer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Dharmendra\17 March\HelloPunditji1\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+E:\Dharmendra\17 March\HelloPunditji1\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\Vivek\cmp\17 March\HelloPunditji1\Layer\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Vivek\cmp\17 March\HelloPunditji1\Layer\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Vivek\cmp\17 March\HelloPunditji1\Layer\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Vivek\cmp\17 March\HelloPunditji1\Layer\BusinessLayer\obj\Debug\BusinessObjects.pdb
+F:\OneDrive\Projects\Echo\Echo\BusinessLayer\bin\Debug\BusinessObjects.dll
+F:\OneDrive\Projects\Echo\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
+F:\OneDrive\Projects\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
+F:\OneDrive\Projects\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\bin\Debug\BusinessObjects.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Projects\Echo_Prod\Echo\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\Projects\Echo_Prod\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\Projects\Echo_Prod\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\Projects\Echo_Prod\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb
+C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\bin\Debug\BusinessObjects.dll
+C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
+C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
+C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb

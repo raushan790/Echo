@@ -1,0 +1,344 @@
+Razorpay:
+amit.sengupta@echocommunicator.com
+Blizz26ard#
+
+
+KGMC Attendance Code: 
+
+-Attendance of students will be saved as absent when generate code button will be 
+ pressed.
+-Create table with fields groupID, date, and attendance code. 
+-The row of this table will removed once the code is expired.
+-Verification for code will be done when attendance is submitted.
+-Verification of code will not required if Teacher is submitting the attendance.
+___________________________________________________________________
+
+Changes made for KGMC and Session, Client Implementation
+-Added Coloumn for Device Details
+-Added coulomn for Session and ClientID in users, Attendance
+-set default value of clientID to 0 in users and 1 in attendance
+
+Import data:
+**This update will run 2 times with role=1 and role=0 to set the admins**
+--update Anatomy set [role]='0' where [role]='user' 
+	--update Biochemistry set [role]='0' where [role]='user' 
+	--update Physiology set [role]='0' where [role]='user' 
+	
+	insert into UserGroupMapping (UserID,UserGroupID,isAdmin)
+select  u.userid,ug.[Group Name],ug.[Role] from Users u inner join Physiology ug
+on u.MobileNo=ug.[Login ID] where u.ClientID=2 
+
+
+
+Demand from APP: We need session, CLientID frm App while saving Users with user Object, userGroups and attendance
+----------------------------------------------------------------
+Student Promotion Steps
+				Step1
+update UserGroups set Description='Class51' where Description='Class 5'
+update UserGroups set Description='Class86' where Description='Class 8'
+ 
+------------------------------------------
+
+				Step2
+delete users where userid in(
+(select UserID from UserGroupMapping where isAdmin=0 and UserGroupID in  
+(select GroupID from UserGroups where Description='Class51')))
+
+delete users where userid in(
+(select UserID from UserGroupMapping where isAdmin=0 and UserGroupID in  
+(select GroupID from UserGroups where Description='Class86')))
+
+delete users where FirstName<>'Head Master' and userid in (
+select UserID from UserGroupMapping where isAdmin=1 and UserGroupID in  
+(select GroupID from UserGroups where Description='Class51'))
+
+delete users where FirstName<>'Head Master' and userid in (
+select UserID from UserGroupMapping where isAdmin=1 and UserGroupID in  
+(select GroupID from UserGroups where Description='Class86'))
+
+delete UserGroupMapping where isAdmin=0 and UserGroupID in  
+(select GroupID from UserGroups where Description='Class51')
+
+delete UserGroupMapping where isAdmin=0 and UserGroupID in  
+(select GroupID from UserGroups where Description='Class86')
+
+
+TRUNCATE TABLE Attendance
+------------------------------------------------------------------------
+					Step 3
+
+update usergroups set description='Class 5' where description='Class 4'
+update usergroups set description='Class 4' where description='Class 3'
+update usergroups set description='Class 3' where description='Class 2'
+update usergroups set description='Class 2' where description='Class 1'
+update usergroups set description='Class 8' where description='Class 7'
+update usergroups set description='Class 7' where description='Class 6'
+
+------------------------------------------------------------------
+
+					Step 4
+
+update usergroups set description='Class 1' where description='Class51'
+update usergroups set description='Class 6' where description='Class86'
+
+*********************************
+
+update usergroups set 
+usergroups.GroupName=SchoolHirarichy.NewGroupName,
+Description=SchoolHirarichy.Class,
+District=SchoolHirarichy.District,
+Block=SchoolHirarichy.Block, 
+Cluster=SchoolHirarichy.Cluster,
+ClientID=1
+from UserGroups,SchoolHirarichy
+where usergroups.GroupName=SchoolHirarichy.OldGroupName
+
+
+
+
+
+UPDATE UserGroups 
+SET UserGroups.GroupName = GroupNameChange.NewGroupName
+FROM UserGroups, GroupNameChange 
+WHERE UserGroups.GroupName = GroupNameChange.OldGroupname
+
+
+update userid coloumn set default to newid in users table
+query to update data from 2 tables
+insert into UserGroupMapping (UserID,UserGroupID,isAdmin)
+select  u.userid,ug.GroupID,1 from Users u inner join usergroups ug
+on u.MobileNo=ug.Owner where u.CreateDate='2019-01-08 00:00:00.000' 
+
+
+select count(AttendanceStatus)as PresentCount from attendance 
+where AttendanceStatus='Present' and AttendanceDate='11/04/2018' 
+and UserID not in(select UserID from UserGroupMapping where isAdmin=1)
+select count(AttendanceStatus)as AbsentCount from attendance where AttendanceStatus='Absent' and AttendanceDate='11/04/2018'
+and UserID not in(select UserID from UserGroupMapping where isAdmin=1)
+
+
+
+login via mobileno
+making mobile related changes for admin for import
+
+[18:42, 12/7/2018] Amit Sengupta: 1. The order of entries.
+[18:42, 12/7/2018] Amit Sengupta: The entries need to be displayed in the order that they are entered
+[18:43, 12/7/2018] Amit Sengupta: 2. Group names and the participant names are not getting altered
+[18:45, 12/7/2018] Amit Sengupta: 3. Change in eh invite - The SMS has to mention the group name. I have given you the draft text
+[18:45, 12/7/2018] Amit Sengupta: 4. Email invite as well as report will have to mention the group name.
+[18:47, 12/7/2018] Amit Sengupta: report must mention the group name in the subject so that it can be sorted
+[18:47, 12/7/2018] shashibhanmaurya: Ok
+[18:48, 12/7/2018] Amit Sengupta: Now the developmental issues:
+[18:49, 12/7/2018] Amit Sengupta: 5. put a scroll bar on the group names on the web. the page is quite awkward given all the groups are displayed
+[18:49, 12/7/2018] Amit Sengupta: 6. Change the images on the website
+[21:50, 12/7/2018] Amit Sengupta: App build requirements
+[21:50, 12/7/2018] Amit Sengupta: 7. Group creation
+[21:51, 12/7/2018] Amit Sengupta: 8. Group edit
+[21:51, 12/7/2018] Amit Sengupta: User side attendance marking
+[21:51, 12/7/2018] Amit Sengupta: 9.
+[21:52, 12/7/2018] Amit Sengupta: 10. Notifications.
+[21:54, 12/7/2018] Amit Sengupta: Common Development
+[21:54, 12/7/2018] Amit Sengupta: 11. Reports for departments.
+
+
+
+
+
+
+
+
+[19:37, 8/30/2018] Amit Sengupta: the email ID I have created is echocommunicator@gmail.com
+[19:37, 8/30/2018] Amit Sengupta: password is kUchU44#
+[20:40, 8/30/2018] Amit Sengupta: https://console.aws.amazon.com/sns/v2/home?region=us-east-1#/newuser
+[20:40, 8/30/2018] Amit Sengupta: Login ID is fmamit@gmail.com
+[20:40, 8/30/2018] Amit Sengupta: password is kUchU44#
+
+http://login.aquasms.com/sendSMS?username=echocommunicator&message=chk&sendername=GOECHO&smstype=TRANS&numbers=9953624768&apikey=3dfb9669-43ce-484c-864e-a09c0e21be3c
+
+PubNub
+Here are your ChatEngine Pub/Sub keys:
+
+Publish Key
+pub-c-a6d61fca-e241-4798-b038-65705582b398
+Subscribe Key
+sub-c-5c87954e-ccb3-11e8-bbf2-f202706b73e5
+
+
+Chatting with Chris
+RateUsEndChat
+	
+Mochahost at 19:35:46
+Welcome to MochaHost 24/7 Live Chat. An agent will be with you momentarily!
+
+	
+Mochahost at 19:35:59
+Hello! My name is Chris, and I have the pleasure to assist you today! Please, * Rate Your * experience at the end of this session.
+
+	
+Chris at 19:36:08
+I have just reviewed your initial question, I'll be happy to assist you as best as I can on the matter!
+
+Echo at 19:36:25
+Hi Chris
+
+Echo at 19:36:41
+if you have reviewed my question
+
+Echo at 19:36:52
+could you please help me
+
+Echo at 19:37:03
+so that I can connect to Sql server database
+
+	
+Chris at 19:37:54
+May I please know if you are getting any specific error when connecting?
+
+Echo at 19:38:14
+Error 40 I am getting
+
+	
+Chris at 19:39:18
+What type of database are you using - MySQL, MSSQL?
+
+Echo at 19:39:28
+MSSQL
+
+	
+Chris at 19:40:39
+Please make sure to use the correct database host. they are:
+wdb2.my-hosting-panel.com for mssql 2016
+wdb1.my-hosting-panel.com for mssql 2012
+
+Echo at 19:42:37
+I have created in 2016
+
+Echo at 19:42:53
+now when giving the host you have provided
+
+Echo at 19:43:32
+now it is giving can not open user default database. Login failed
+
+Echo at 19:43:49
+login failed for user echo01_echo
+
+	
+Chris at 19:44:57
+Let me check, please
+
+	
+Chris at 19:49:17
+I am sorry but I am not able to see database created
+
+	
+Chris at 19:49:42
+You have SQL Server 2012 Databases menu
+
+Echo at 19:49:55
+echo01_echo
+
+Echo at 19:50:16
+echo01_echo is user
+
+Echo at 19:50:27
+also echo01_shashibhan
+
+Echo at 19:50:33
+is another user
+
+	
+Chris at 19:50:49
+Can you tell me where are these created
+
+Echo at 19:51:04
+using CPanel
+
+Echo at 19:51:12
+under databases
+
+Echo at 19:51:24
+SqlServer 2016
+
+	
+Chris at 19:51:45
+Can you send me a screenshot of this menu please
+
+	
+Chris at 19:51:51
+In order to share a screenshot with us, may I suggest using the following web tool and then provide me the generated URL:
+
+https://imgur.com/upload
+
+Echo at 19:53:49
+https://imgur.com/a/Nvyfizg
+
+	
+Chris at 19:54:34
+Thank you
+
+	
+Chris at 19:54:39
+I see it now
+
+	
+Chris at 19:55:29
+Can you confirm the database name and password that you are using to connect
+
+Echo at 19:56:08
+echo01_echo
+
+Echo at 19:56:24
+user echo01_echo
+
+Echo at 19:56:35
+pwd abC@123#
+
+	
+Chris at 19:59:36
+I'll be right with you.
+
+	
+Chris at 20:01:54
+I am checking for something now and will ask you to test in a bit
+
+Echo at 20:02:06
+ok
+
+	
+Chris at 20:04:00
+Please try to connect now
+
+Echo at 20:05:43
+I am able to connect now
+
+Echo at 20:06:07
+could you please do the same for user shashibhan
+
+	
+Chris at 20:06:45
+It was just using the wrong password and I set it to the one you provided
+
+	
+Chris at 20:07:03
+I will do it now
+
+Echo at 20:11:43
+also could you please let me know which host I should use for FTP
+
+Echo at 20:11:55
+so that I can upload the site
+
+	
+Chris at 20:12:33
+You can use ftp.echocommunicator.com
+
+Your language: Auto Translate:OFF
+Enter your message here...
+ 
+
+
+
+
+	
+
+								

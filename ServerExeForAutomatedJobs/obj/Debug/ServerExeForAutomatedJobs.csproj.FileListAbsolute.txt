@@ -1,0 +1,25 @@
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csprojResolveAssemblyReference.cache
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Form1.resources
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Properties.Resources.resources
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csproj.GenerateResource.Cache
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\ServerExeForAutomatedJobs.exe.config
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\ServerExeForAutomatedJobs.exe
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\ServerExeForAutomatedJobs.pdb
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\BusinessObjects.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\DataObjects.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\Newtonsoft.Json.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Amazon.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Apple.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Blackberry.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Core.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Firefox.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Google.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Windows.dll
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\BusinessObjects.pdb
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\DataObjects.pdb
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\bin\Debug\Newtonsoft.Json.xml
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.exe
+F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.pdb
+C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Form1.resources
+C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Properties.Resources.resources
+C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csproj.GenerateResource.cache
