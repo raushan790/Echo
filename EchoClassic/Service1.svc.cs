@@ -20,6 +20,7 @@ using DataObjects.AdoNet;
 using System.ServiceModel.Web;
 using System.Net;
 using System.Threading;
+using System.Web.Script.Serialization;
 
 namespace EchoClassic
 {
@@ -1495,7 +1496,99 @@ namespace EchoClassic
             }
         }
 
-        public User SetUser(Stream StreamWithData)
+        public string SetUser(Stream StreamWithData)
+        {
+            User chkUserDetails = new User();
+            string BinaryFileName = string.Empty;
+
+            try
+            {
+                byte[] buf = new byte[1024000];
+                MultipartParser parser = new MultipartParser(StreamWithData);
+
+                if (parser != null && parser.Success)
+                {
+
+                    foreach (var item in parser.MyContents)
+                    {
+                        //Check our requested fordata
+                        if (item.PropertyName == "UserID")
+                        {
+                            chkUserDetails.UserID = Convert.ToString(item.StringData.Replace("\r", "").Trim());
+
+                        }
+                        if (item.PropertyName == "fname")
+                        {
+                            if (item.StringData.Replace("\r", "").Trim() != "")
+                            {
+                                chkUserDetails.FirstName = item.StringData.Replace("\r", "").Trim(); ;
+                            }
+                        }
+                        if (item.PropertyName == "mobile")
+                        {
+                            if (item.StringData.Replace("\r", "").Trim() != "")
+                            {
+                                chkUserDetails.MobileNo = item.StringData.Replace("\r", "").Trim();
+                            }
+                        }
+
+                        if (item.PropertyName == "email")
+                        {
+                            chkUserDetails.EMail = item.StringData.Replace("\r", "").Trim();
+
+                        }
+                        if (item.PropertyName == "facebook")
+                        {
+                            chkUserDetails.Facebook = item.StringData.Replace("\r", "").Trim();
+
+                        }
+                        if (item.PropertyName == "linkedin")
+                        {
+                            chkUserDetails.LinkedIn = item.StringData.Replace("\r", "").Trim();
+                        }
+                        if (item.PropertyName == "twitter")
+                        {
+                            chkUserDetails.Twitter = item.StringData.Replace("\r", "").Trim();
+                        }
+                        if (item.PropertyName == "Pimage")
+                        {
+                            chkUserDetails.ImageID = item.StringData.Replace("\r", "").Trim();
+                        }
+                    }
+                    if (parser.FileContents != null)
+                    {
+                        if (parser.FileContents.Length > 0)
+                        {
+                            if (parser.Filename != string.Empty)
+                            {
+                                using (MemoryStream ms = new MemoryStream(parser.FileContents))
+                                {
+                                    int capacity = ms.Capacity;
+                                    byte[] buffer = new byte[capacity];
+                                    ms.Read(buffer, 0, buffer.Length);
+                                    BinaryFileName = DateTime.UtcNow.AddHours(5.5).ToString("mmddyyyyhhmmss") + parser.Filename.Replace("\r", "");
+
+                                    FileStream f = new FileStream(HostingEnvironment.MapPath("~/ProfilePic/" + BinaryFileName), FileMode.OpenOrCreate);
+                                    f.Write(buffer, 0, buffer.Length);
+                                    f.Close();
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                chkUserDetails = null;
+            }
+            var json = new JavaScriptSerializer().Serialize(chkUserDetails);
+            return json;
+        }
+
+
+        public User SetUserNew(Stream StreamWithData)
         {
             User chkUserDetails = new User();
             string BinaryFileName = string.Empty;

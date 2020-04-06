@@ -29,3 +29,13 @@ C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\EchoService\obj\Debug\E
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\EchoService\obj\Debug\EchoService.csproj.CopyComplete
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\EchoService\obj\Debug\EchoService.dll
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\EchoService\obj\Debug\EchoService.pdb
+D:\RaushanGitHub\Echo\EchoService\bin\EchoService.dll.config
+D:\RaushanGitHub\Echo\EchoService\bin\EchoService.dll
+D:\RaushanGitHub\Echo\EchoService\bin\EchoService.pdb
+D:\RaushanGitHub\Echo\EchoService\bin\BusinessObjects.dll
+D:\RaushanGitHub\Echo\EchoService\bin\DataObjects.dll
+D:\RaushanGitHub\Echo\EchoService\bin\BusinessObjects.pdb
+D:\RaushanGitHub\Echo\EchoService\bin\DataObjects.pdb
+D:\RaushanGitHub\Echo\EchoService\obj\Debug\EchoService.csprojResolveAssemblyReference.cache
+D:\RaushanGitHub\Echo\EchoService\obj\Debug\EchoService.dll
+D:\RaushanGitHub\Echo\EchoService\obj\Debug\EchoService.pdb

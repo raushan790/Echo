@@ -548,9 +548,15 @@ namespace EchoClassic
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped, Method = "POST",
         RequestFormat = WebMessageFormat.Json,
         ResponseFormat = WebMessageFormat.Json,
-        UriTemplate = "/SetUser")]
-        User SetUser(Stream StreamWithData);
+        UriTemplate = "/SetUserNew")]
+        User SetUserNew(Stream StreamWithData);
 
+        [OperationContract]
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped, Method = "POST",
+        RequestFormat = WebMessageFormat.Json,
+        ResponseFormat = WebMessageFormat.Json,
+        UriTemplate = "/SetUser")]
+        string SetUser(Stream StreamWithData);
 
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped, Method = "POST",
