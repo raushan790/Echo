@@ -150,6 +150,5 @@ C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\obj\Debug
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb
 D:\RaushanGitHub\Echo\BusinessLayer\bin\Debug\BusinessObjects.dll
 D:\RaushanGitHub\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
-D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.csprojResolveAssemblyReference.cache
 D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
 D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb

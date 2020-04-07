@@ -439,6 +439,7 @@ D:\RaushanGitHub\Echo\EchoClassic\bin\PushSharp.Core.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\PushSharp.Firefox.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\PushSharp.Google.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\PushSharp.Windows.dll
+D:\RaushanGitHub\Echo\EchoClassic\bin\SendGrid.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\SparkPost.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\System.Web.Optimization.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\System.Web.Providers.dll
@@ -458,6 +459,8 @@ D:\RaushanGitHub\Echo\EchoClassic\bin\Hangfire.Core.xml
 D:\RaushanGitHub\Echo\EchoClassic\bin\Hangfire.SqlServer.xml
 D:\RaushanGitHub\Echo\EchoClassic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\RaushanGitHub\Echo\EchoClassic\bin\Newtonsoft.Json.xml
+D:\RaushanGitHub\Echo\EchoClassic\bin\SendGrid.pdb
+D:\RaushanGitHub\Echo\EchoClassic\bin\SendGrid.xml
 D:\RaushanGitHub\Echo\EchoClassic\bin\SparkPost.xml
 D:\RaushanGitHub\Echo\EchoClassic\bin\System.Web.Optimization.xml
 D:\RaushanGitHub\Echo\EchoClassic\bin\Antlr3.Runtime.pdb
@@ -485,6 +488,3 @@ D:\RaushanGitHub\Echo\EchoClassic\bin\zh-TW\Hangfire.Core.resources.dll
 D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.csprojResolveAssemblyReference.cache
 D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.dll
 D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.pdb
-D:\RaushanGitHub\Echo\EchoClassic\bin\SendGrid.dll
-D:\RaushanGitHub\Echo\EchoClassic\bin\SendGrid.pdb
-D:\RaushanGitHub\Echo\EchoClassic\bin\SendGrid.xml
