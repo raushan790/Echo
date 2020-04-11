@@ -244,12 +244,12 @@ namespace EchoClassic
         {
             return DataAccess.NoticeDao.GetNoticePagingAdmin(PageIndex, PageSize, GroupID, UserID);
         }
-        public int CreateNotice(int GroupID, IList<string> UserIDs, string NoticeTitle, string NoticeDetail, string Createdby, string NoticeDate, string FileName, int FileType=0,int ParentId = 0, int IsSms = 0, int IsReply=0)
+        public int CreateNotice(int GroupID, IList<string> UserIDs, string NoticeTitle, string NoticeDetail, string Createdby, string NoticeDate, string FileName, int FileType=0,int ParentId = 0, int IsSms = 0, int IsReply=0, string strdeepLink="")
         {
             int result = 0;
             try
             {
-                result = DataAccess.NoticeDao.CreateNotice(GroupID, UserIDs, NoticeTitle, NoticeDetail, Createdby, DateTime.UtcNow.AddHours(5.5), FileName, FileType,ParentId,IsSms,IsReply);
+                result = DataAccess.NoticeDao.CreateNotice(GroupID, UserIDs, NoticeTitle, NoticeDetail, Createdby, DateTime.UtcNow.AddHours(5.5), FileName, FileType,ParentId,IsSms,IsReply, strdeepLink);
             }
             catch (Exception ex)
             {
@@ -273,6 +273,8 @@ namespace EchoClassic
             int ParentId = 0;
             int IsSms = 0;
             int IsReply = 0;
+            string strUserId = "";
+            string strdeepLink = "";
             Notice n = new Notice();
             try
             {
@@ -314,6 +316,12 @@ namespace EchoClassic
                             Createdby = item.StringData.Replace("\r", "").Trim();
 
                         }
+                        if (item.PropertyName == "UserID")
+                        {
+                            strUserId = item.StringData.Replace("\r", "").Trim();
+
+                        }
+                        
                         if (item.PropertyName == "NoticeDate")
                         {
                             NoticeDate = item.StringData.Replace("\r", "").Trim();
@@ -337,6 +345,11 @@ namespace EchoClassic
                         if (item.PropertyName == "IsReply")
                         {
                             IsReply = Convert.ToInt32(item.StringData.Replace("\r", "").Trim());
+
+                        }
+                        if (item.PropertyName == "strdeepLink")
+                        {
+                            strdeepLink = Convert.ToString(item.StringData.Replace("\r", "").Trim());
 
                         }
                     }
@@ -367,7 +380,7 @@ namespace EchoClassic
                 }
                 if (NoticeDetail != string.Empty && NoticeDate != string.Empty && GroupID != 0)
                 {
-                   int noticeID= CreateNotice(GroupID, UserIDList, NoticeTitle, NoticeDetail, Createdby, NoticeDate, BinaryFileName,FileType,ParentId,IsSms,IsReply);
+                   int noticeID= CreateNotice(GroupID, UserIDList, NoticeTitle, NoticeDetail, Createdby, NoticeDate, BinaryFileName,FileType,ParentId,IsSms,IsReply,strdeepLink);
                     
                     n.NoticeID = noticeID;
                     n.GroupID = GroupID;
@@ -381,8 +394,9 @@ namespace EchoClassic
                     n.ParentId = ParentId;
                     n.IsSms = IsSms;
                     n.IsReply = IsReply;
+                    n.deepLink = strdeepLink;
                 }
-                smail(GroupID);
+                smail(GroupID, n);
             }
             catch (Exception ex)
             {
@@ -390,23 +404,38 @@ namespace EchoClassic
             }
             return n;
         }
-        public void smail(int GroupID)
+        public void smail(int GroupID, Notice n)
         {
+            User u = new User();
+            u = GetUserbyID(n.UserID);
             if (GroupID != 0)
             {
+                string strmessage = "By " + u.FirstName + " on " + n.NoticeDate + ".Notice Title-" + n.NoticeTitle +" Content- "+ n.NoticeData;
+
                 IList<User> userObje = GetGroupMembers(Convert.ToString(GroupID));
                 for (int i = 0; i < userObje.Count; i++)
                 {
-                    SendMail(userObje[i].EMail);
+                    SendMail(userObje[i].EMail,n, u.FirstName);
+
+                    if (strmessage.Length>100)
+                    {
+                        PostSMS(userObje[i].MobileNo, strmessage.Substring(0, 100) + "Read more" + n.deepLink);
+                    }
+                    else
+                    {
+                        PostSMS(userObje[i].MobileNo, strmessage);
+                    }
                 }
 
             }
         }
 
-        public async void SendMail(string EMail)
+        public async void SendMail(string EMail, Notice n, string UName)
         {
-            var apiKey = "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";// Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
+            //var apiKey = "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";//"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";// Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
+            string apiKey = "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";
             var client = new SendGridClient(apiKey);
+            string strmessage = "By " + UName + " on " + n.NoticeDate + ".Notice Title-" + n.NoticeTitle + " Content- " + n.NoticeData;
             string data = @"{
                           'personalizations': [
                             {
@@ -415,16 +444,16 @@ namespace EchoClassic
                                   'email': '" + EMail + @"'
                                 }
                               ],
-                                'subject': 'Update in Notice Group'
+                                'subject': 'Notice Update "+ n.NoticeTitle + " By " + n.UserName + @"' 
                             }
                           ],
                           'from': {
-                            'email': 'Raushan790@gmail.com'
+                            'email': 'support@echocommunicator.com'
                           },
                           'content': [
                             {
                               'type': 'text/plain',
-                               'value': 'Hello, New Update in Notice Group!'
+                               'value': '" + strmessage + @"'
                             }
                           ]
                         }";

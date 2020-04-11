@@ -25,9 +25,9 @@ namespace CommonControls
             return DataAccess.NoticeDao.GetNoticePaging(PageIndex, PageSize, GroupID, UserID);
         }
         [DataObjectMethod(DataObjectMethodType.Insert)]
-        public int CreateNotice(int GroupID, System.Collections.Generic.IList<string> UserIDs, string NoticeTitle, string NoticeDetail, string Createdby, DateTime NoticeDate,string FileName, int FileType=0,int ParentId=0,int IsSms=0,int IsReply=0)
+        public int CreateNotice(int GroupID, System.Collections.Generic.IList<string> UserIDs, string NoticeTitle, string NoticeDetail, string Createdby, DateTime NoticeDate,string FileName, int FileType=0,int ParentId=0,int IsSms=0,int IsReply=0, string strdeepLink="")
         {
-            return DataAccess.NoticeDao.CreateNotice(GroupID, UserIDs, NoticeTitle, NoticeDetail, Createdby, NoticeDate,FileName,FileType,ParentId,IsSms, IsReply);
+            return DataAccess.NoticeDao.CreateNotice(GroupID, UserIDs, NoticeTitle, NoticeDetail, Createdby, NoticeDate,FileName,FileType,ParentId,IsSms, IsReply,strdeepLink);
         }
         [DataObjectMethod(DataObjectMethodType.Delete)]
         public int DeleteNotice(int NoticeID)

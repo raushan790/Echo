@@ -15,7 +15,7 @@ namespace BusinessObjects
         public Notice(int _NoticeID, int _GroupID, string _UserID,
            string _NoticeTitle, string _NoticeData, string _NoticeDate
             , string _FileName, int _FileType, bool _IsRead, string _UserName,
-           int _ParentId, int _ReadCount, int _DeliveryCount, int _ReplyCount, int _IsSms, int _IsReply,int _ReplyReadPendingCount)
+           int _ParentId, int _ReadCount, int _DeliveryCount, int _ReplyCount, int _IsSms, int _IsReply,int _ReplyReadPendingCount,string _deepLink="")
         : this()
         {
             NoticeID = _NoticeID;
@@ -35,6 +35,7 @@ namespace BusinessObjects
             IsSms = _IsSms;
             IsReply = _IsReply;
             ReplyReadPendingCount = _ReplyReadPendingCount;
+            deepLink = _deepLink;
         }
         [DataMember]
         public int NoticeID { get; set; }
@@ -70,5 +71,8 @@ namespace BusinessObjects
         public int IsReply { get; set; }
         [DataMember]
         public int ReplyReadPendingCount { get; set; }
+
+        [DataMember]
+        public string deepLink { get; set; }
     }
 }

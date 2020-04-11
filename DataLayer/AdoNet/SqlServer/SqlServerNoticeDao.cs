@@ -11,11 +11,11 @@ namespace DataObjects.AdoNet.SqlServer
     public class SqlServerNoticeDao : INoticeDao
     {
 
-        public int CreateNoticeDetail(string NoticeTitle, string NoticeDetail, string Createdby, DateTime NoticeDate, string FileName, int FileType, int ParentId, int IsSms, int IsReply)
+        public int CreateNoticeDetail(string NoticeTitle, string NoticeDetail, string Createdby, DateTime NoticeDate, string FileName, int FileType, int ParentId, int IsSms, int IsReply,string deepLink="")
         {
             bool _IsSms = Convert.ToBoolean(IsSms);
             bool _IsReply = Convert.ToBoolean(IsReply);
-            SqlParameter[] m = new SqlParameter[10];
+            SqlParameter[] m = new SqlParameter[11];
             m[0] = new SqlParameter("@NoticeID", SqlDbType.Int);
             m[1] = new SqlParameter("@NoticeTitle", NoticeTitle);
             m[2] = new SqlParameter("@NoticeDetail", NoticeDetail);
@@ -26,17 +26,18 @@ namespace DataObjects.AdoNet.SqlServer
             m[7] = new SqlParameter("@ParentId", ParentId);
             m[8] = new SqlParameter("@IsSms", _IsSms);
             m[9] = new SqlParameter("@IsReply", _IsReply);
+            m[10] = new SqlParameter("@deepLink", deepLink);
             m[0].Direction = ParameterDirection.Output;
             SqlHelper.ExecuteNonQuery(Connection.Connection_string, CommandType.StoredProcedure, "InsertNoticeDetail", m);
             object ivalue = m[0].Value;
             return (int)ivalue;
 
         }
-        public int CreateNotice(int GroupID, IList<string> UserIDs, string NoticeTitle, string NoticeDetail, string Createdby, DateTime NoticeDate, string FileName, int FileType=0, int ParentId=0, int IsSms=0, int IsReply=0)
+        public int CreateNotice(int GroupID, IList<string> UserIDs, string NoticeTitle, string NoticeDetail, string Createdby, DateTime NoticeDate, string FileName, int FileType=0, int ParentId=0, int IsSms=0, int IsReply=0, string strdeepLink="")
         {
             try
             {
-                int NoticeID = CreateNoticeDetail(NoticeTitle, NoticeDetail, Createdby, NoticeDate, FileName, FileType, ParentId, IsSms, IsReply);
+                int NoticeID = CreateNoticeDetail(NoticeTitle, NoticeDetail, Createdby, NoticeDate, FileName, FileType, ParentId, IsSms, IsReply, strdeepLink);
                 if (NoticeID > 0)
                 {
 

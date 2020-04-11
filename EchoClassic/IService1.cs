@@ -107,7 +107,7 @@ namespace EchoClassic
         RequestFormat = WebMessageFormat.Json,
         ResponseFormat = WebMessageFormat.Json,
          UriTemplate = "/CreateNotice")]
-        int CreateNotice(int GroupID, IList<string> UserIDs, string NoticeTitle, string NoticeDetail, string Createdby, string NoticeDate,string FileName,int FileType=0,int ParentId=0, int IsSms=0, int IsReply=0);
+        int CreateNotice(int GroupID, IList<string> UserIDs, string NoticeTitle, string NoticeDetail, string Createdby, string NoticeDate,string FileName,int FileType=0,int ParentId=0, int IsSms=0, int IsReply=0, string strdeepLink="");
 
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped, Method = "POST",
