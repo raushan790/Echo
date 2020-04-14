@@ -148,12 +148,12 @@ C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\bin\Debug
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb
-D:\RaushanGitHub\Echo\BusinessLayer\bin\Debug\BusinessObjects.dll
-D:\RaushanGitHub\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
-D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
-D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb
 D:\Git\Echo\BusinessLayer\bin\Debug\BusinessObjects.dll
 D:\Git\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
 D:\Git\Echo\BusinessLayer\obj\Debug\BusinessObjects.csprojAssemblyReference.cache
 D:\Git\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
 D:\Git\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb
+D:\RaushanGitHub\Echo\BusinessLayer\bin\Debug\BusinessObjects.dll
+D:\RaushanGitHub\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
+D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb

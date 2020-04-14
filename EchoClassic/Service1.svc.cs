@@ -406,27 +406,36 @@ namespace EchoClassic
         }
         public void smail(int GroupID, Notice n)
         {
-            User u = new User();
-            u = GetUserbyID(n.UserID);
-            if (GroupID != 0)
+            try
             {
-                string strmessage = "By " + u.FirstName + " on " + n.NoticeDate + ".Notice Title-" + n.NoticeTitle +" Content- "+ n.NoticeData;
-
-                IList<User> userObje = GetGroupMembers(Convert.ToString(GroupID));
-                for (int i = 0; i < userObje.Count; i++)
+                User u = new User();
+                u = GetUserbyID(n.UserID);
+                if (GroupID != 0)
                 {
-                    SendMail(userObje[i].EMail,n, u.FirstName);
+                    string strmessage = "By " + u.FirstName + " on " + n.NoticeDate + ".Notice Title-" + n.NoticeTitle + " Content- " + n.NoticeData;
 
-                    if (strmessage.Length>100)
+                    IList<User> userObje = GetGroupMembersforMails(Convert.ToString(GroupID));
+                    for (int i = 0; i < userObje.Count; i++)
                     {
-                        PostSMS(userObje[i].MobileNo, strmessage.Substring(0, 100) + "Read more" + n.deepLink);
+                        SendMail(userObje[i].EMail, n, u.FirstName);
+                        if (n.IsSms == 1)
+                        {
+                            if (strmessage.Length > 100)
+                            {
+                                PostSMS(userObje[i].MobileNo, strmessage.Substring(0, 100) + "Read more" + n.deepLink);
+                            }
+                            else
+                            {
+                                PostSMS(userObje[i].MobileNo, strmessage);
+                            }
+                        }
                     }
-                    else
-                    {
-                        PostSMS(userObje[i].MobileNo, strmessage);
-                    }
+
                 }
-
+            }
+            catch(Exception ex)
+            {
+                throw ex;
             }
         }
 
@@ -462,7 +471,6 @@ namespace EchoClassic
             var response = await client.RequestAsync(SendGridClient.Method.POST,
                                                  json.ToString(),
                                                  urlPath: "mail/send");
-
         }
 
         public int DeleteNotice(int NoticeID)
@@ -1399,6 +1407,15 @@ namespace EchoClassic
 
             return Students;
         }
+
+        public IList<User> GetGroupMembersforMails(string GroupID)
+        {
+            IList<User> userList = DataAccess.UserDao.GetUsersByGroup(Convert.ToInt32(GroupID));
+            IList<User> AdminList = DataAccess.UserDao.SelectGroupAdmins(Convert.ToInt32(GroupID));
+            var Students = userList.ToList();
+
+            return Students;
+        }
         public UserGroups GetUserGroup(string GroupID)
         {
             UserGroups group = DataAccess.UserGroupsDao.GetUserGroup(Convert.ToInt32(GroupID));
@@ -1569,231 +1586,98 @@ namespace EchoClassic
 
         public string SetUser(Stream StreamWithData)
         {
-            User chkUserDetails = new User();
-            string BinaryFileName = string.Empty;
-
-            try
-            {
-                byte[] buf = new byte[1024000];
-                MultipartParser parser = new MultipartParser(StreamWithData);
-
-                if (parser != null && parser.Success)
-                {
-
-                    foreach (var item in parser.MyContents)
-                    {
-                        //Check our requested fordata
-                        if (item.PropertyName == "UserID")
-                        {
-                            chkUserDetails.UserID = Convert.ToString(item.StringData.Replace("\r", "").Trim());
-
-                        }
-                        if (item.PropertyName == "fname")
-                        {
-                            if (item.StringData.Replace("\r", "").Trim() != "")
-                            {
-                                chkUserDetails.FirstName = item.StringData.Replace("\r", "").Trim(); ;
-                            }
-                        }
-                        if (item.PropertyName == "mobile")
-                        {
-                            if (item.StringData.Replace("\r", "").Trim() != "")
-                            {
-                                chkUserDetails.MobileNo = item.StringData.Replace("\r", "").Trim();
-                            }
-                        }
-
-                        if (item.PropertyName == "email")
-                        {
-                            chkUserDetails.EMail = item.StringData.Replace("\r", "").Trim();
-
-                        }
-                        if (item.PropertyName == "facebook")
-                        {
-                            chkUserDetails.Facebook = item.StringData.Replace("\r", "").Trim();
-
-                        }
-                        if (item.PropertyName == "linkedin")
-                        {
-                            chkUserDetails.LinkedIn = item.StringData.Replace("\r", "").Trim();
-                        }
-                        if (item.PropertyName == "twitter")
-                        {
-                            chkUserDetails.Twitter = item.StringData.Replace("\r", "").Trim();
-                        }
-                        if (item.PropertyName == "Pimage")
-                        {
-                            chkUserDetails.ImageID = item.StringData.Replace("\r", "").Trim();
-                        }
-                    }
-                    if (parser.FileContents != null)
-                    {
-                        if (parser.FileContents.Length > 0)
-                        {
-                            if (parser.Filename != string.Empty)
-                            {
-                                using (MemoryStream ms = new MemoryStream(parser.FileContents))
-                                {
-                                    int capacity = ms.Capacity;
-                                    byte[] buffer = new byte[capacity];
-                                    ms.Read(buffer, 0, buffer.Length);
-                                    BinaryFileName = DateTime.UtcNow.AddHours(5.5).ToString("mmddyyyyhhmmss") + parser.Filename.Replace("\r", "");
-
-                                    FileStream f = new FileStream(HostingEnvironment.MapPath("~/ProfilePic/" + BinaryFileName), FileMode.OpenOrCreate);
-                                    f.Write(buffer, 0, buffer.Length);
-                                    f.Close();
-                                }
-                            }
-
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-
-                chkUserDetails = null;
-            }
-            var json = new JavaScriptSerializer().Serialize(chkUserDetails);
-            return json;
-        }
-
-
-        public User SetUserNew(Stream StreamWithData)
-        {
-            User chkUserDetails = new User();
-            string BinaryFileName = string.Empty;
-
-            try
-            {
-                byte[] buf = new byte[1024000];
-                MultipartParser parser = new MultipartParser(StreamWithData);
-
-                if (parser != null && parser.Success)
-                {
-
-                    foreach (var item in parser.MyContents)
-                    {
-                        //Check our requested fordata
-                        if (item.PropertyName == "UserID")
-                        {
-                            chkUserDetails.UserID = Convert.ToString(item.StringData.Replace("\r", "").Trim());
-
-                        }
-                        if (item.PropertyName == "fname")
-                        {
-                            if (item.StringData.Replace("\r", "").Trim() != "")
-                            {
-                                chkUserDetails.FirstName = item.StringData.Replace("\r", "").Trim(); ;
-                            }
-                        }
-                        if (item.PropertyName == "mobile")
-                        {
-                            if (item.StringData.Replace("\r", "").Trim() != "")
-                            {
-                                chkUserDetails.MobileNo = item.StringData.Replace("\r", "").Trim();
-                            }
-                        }
-
-                        if (item.PropertyName == "email")
-                        {
-                            chkUserDetails.EMail = item.StringData.Replace("\r", "").Trim();
-
-                        }
-                        if (item.PropertyName == "facebook")
-                        {
-                            chkUserDetails.Facebook = item.StringData.Replace("\r", "").Trim();
-
-                        }
-                        if (item.PropertyName == "linkedin")
-                        {
-                            chkUserDetails.LinkedIn = item.StringData.Replace("\r", "").Trim();
-                        }
-                        if (item.PropertyName == "twitter")
-                        {
-                            chkUserDetails.Twitter = item.StringData.Replace("\r", "").Trim();
-                        }
-                        if (item.PropertyName == "Pimage")
-                        {
-                            chkUserDetails.ImageID = item.StringData.Replace("\r", "").Trim();
-                        }
-                    }
-                    if (parser.FileContents != null)
-                    {
-                        if (parser.FileContents.Length > 0)
-                        {
-                            if (parser.Filename != string.Empty)
-                            {
-                                using (MemoryStream ms = new MemoryStream(parser.FileContents))
-                                {
-                                    int capacity = ms.Capacity;
-                                    byte[] buffer = new byte[capacity];
-                                    ms.Read(buffer, 0, buffer.Length);
-                                    BinaryFileName = DateTime.UtcNow.AddHours(5.5).ToString("mmddyyyyhhmmss") + parser.Filename.Replace("\r", "");
-
-                                    FileStream f = new FileStream(HostingEnvironment.MapPath("~/ProfilePic/" + BinaryFileName), FileMode.OpenOrCreate);
-                                    f.Write(buffer, 0, buffer.Length);
-                                    f.Close();
-                                }
-                            }
-
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-
-                chkUserDetails = null;
-            }
-            return chkUserDetails;
-            //    if(DataAccess.UserDao.setUserDetails(chkUserDetails).ToString()=="1")
-            //    {
-            //        return chkUserDetails;
-            //    }
-            //    else
-            //    {
-            //        return null;
-            //    }
-            //}
-            //catch (Exception)
-            //{
-
-            //    throw;
-            //}
-        }
-
-
-        public string SetUser1(string UserID, string fname = "", string lname = "", string mobile = "", string email = "", string facebook = "", string linkedin = "", string twitter = "", string Pimage = "")
-        {
             try
             {
                 User chkUserDetails = new User();
-                chkUserDetails.UserID = UserID;
-                if (fname != "")
-                {
-                    chkUserDetails.FirstName = fname;
-                }
-                if (lname != "")
-                {
-                    chkUserDetails.LastName = lname;
-                }
-                if (mobile != "")
-                {
-                    chkUserDetails.MobileNo = mobile;
-                }
-                chkUserDetails.EMail = email;
-                chkUserDetails.Facebook = facebook;
-                chkUserDetails.LinkedIn = linkedin;
-                chkUserDetails.Twitter = twitter;
-                chkUserDetails.ImageID = Pimage;
-                return DataAccess.UserDao.setUserDetails(chkUserDetails).ToString();
+                string BinaryFileName = string.Empty;
 
+                byte[] buf = new byte[1024000];
+                MultipartParser parser = new MultipartParser(StreamWithData);
+
+                if (parser != null && parser.Success)
+                {
+
+                    foreach (var item in parser.MyContents)
+                    {
+                        //Check our requested fordata
+                        if (item.PropertyName == "UserID")
+                        {
+                            chkUserDetails.UserID = Convert.ToString(item.StringData.Replace("\r", "").Trim());
+
+                        }
+                        if (item.PropertyName == "fname")
+                        {
+                            if (item.StringData.Replace("\r", "").Trim() != "")
+                            {
+                                chkUserDetails.FirstName = item.StringData.Replace("\r", "").Trim(); ;
+                            }
+                        }
+                        if (item.PropertyName == "mobile")
+                        {
+                            if (item.StringData.Replace("\r", "").Trim() != "")
+                            {
+                                chkUserDetails.MobileNo = item.StringData.Replace("\r", "").Trim();
+                            }
+                        }
+
+                        if (item.PropertyName == "email")
+                        {
+                            chkUserDetails.EMail = item.StringData.Replace("\r", "").Trim();
+
+                        }
+                        if (item.PropertyName == "facebook")
+                        {
+                            chkUserDetails.Facebook = item.StringData.Replace("\r", "").Trim();
+
+                        }
+                        if (item.PropertyName == "linkedin")
+                        {
+                            chkUserDetails.LinkedIn = item.StringData.Replace("\r", "").Trim();
+                        }
+                        if (item.PropertyName == "twitter")
+                        {
+                            chkUserDetails.Twitter = item.StringData.Replace("\r", "").Trim();
+                        }
+                        //if (item.PropertyName == "Pimage")
+                        //{
+                        //    chkUserDetails.ImageID = item.StringData.Replace("\r", "").Trim();
+                        //}
+                    }
+                    if (parser.FileContents != null)
+                    {
+                        if (parser.FileContents.Length > 0)
+                        {
+                            if (parser.Filename != string.Empty)
+                            {
+                                using (MemoryStream ms = new MemoryStream(parser.FileContents))
+                                {
+                                    int capacity = ms.Capacity;
+                                    byte[] buffer = new byte[capacity];
+                                    ms.Read(buffer, 0, buffer.Length);
+                                    BinaryFileName = DateTime.UtcNow.AddHours(5.5).ToString("mmddyyyyhhmmss") + chkUserDetails.UserID.Replace("\r", "");
+                                    chkUserDetails.ImageID = HostingEnvironment.MapPath("~/ProfilePic/" + BinaryFileName);
+                                    FileStream f = new FileStream(HostingEnvironment.MapPath("~/ProfilePic/" + BinaryFileName), FileMode.OpenOrCreate);
+                                    f.Write(buffer, 0, buffer.Length);
+                                    f.Close();
+                                }
+                            }
+
+                        }
+                    }
+                }
+                if (DataAccess.UserDao.setUserDetails(chkUserDetails).ToString() == "1")
+                {
+                    var json = new JavaScriptSerializer().Serialize(chkUserDetails);
+                    return json;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                return ex.ToString();
             }
         }
 

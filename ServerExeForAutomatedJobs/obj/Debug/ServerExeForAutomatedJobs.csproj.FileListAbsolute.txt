@@ -23,28 +23,6 @@ F:\OneDrive\Projects\EchoNewDesign\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Form1.resources
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Properties.Resources.resources
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csproj.GenerateResource.cache
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csprojResolveAssemblyReference.cache
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Form1.resources
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Properties.Resources.resources
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csproj.GenerateResource.Cache
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\ServerExeForAutomatedJobs.exe.config
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\ServerExeForAutomatedJobs.exe
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\ServerExeForAutomatedJobs.pdb
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\BusinessObjects.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\DataObjects.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\Newtonsoft.Json.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Amazon.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Apple.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Blackberry.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Core.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Firefox.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Google.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Windows.dll
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\BusinessObjects.pdb
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\DataObjects.pdb
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\Newtonsoft.Json.xml
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.exe
-D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.pdb
 D:\Git\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Form1.resources
 D:\Git\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Properties.Resources.resources
 D:\Git\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csproj.GenerateResource.cache
@@ -68,3 +46,23 @@ D:\Git\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csproj
 D:\Git\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.exe
 D:\Git\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.pdb
 D:\Git\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csprojAssemblyReference.cache
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csprojResolveAssemblyReference.cache
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Form1.resources
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.Properties.Resources.resources
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.csproj.GenerateResource.Cache
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\ServerExeForAutomatedJobs.exe.config
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\ServerExeForAutomatedJobs.exe
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\ServerExeForAutomatedJobs.pdb
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\Newtonsoft.Json.dll
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Amazon.dll
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Apple.dll
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Blackberry.dll
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Core.dll
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Firefox.dll
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Google.dll
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\PushSharp.Windows.dll
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\BusinessObjects.pdb
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\DataObjects.pdb
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\bin\Debug\Newtonsoft.Json.xml
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.exe
+D:\RaushanGitHub\Echo\ServerExeForAutomatedJobs\obj\Debug\ServerExeForAutomatedJobs.pdb

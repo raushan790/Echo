@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "cccb6917-1940-4d58-a986-40e2f2c1bfd6",
+		"name": "sumit copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://echo.echocommunicator.com/service1.svc/CreateNoticeV1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "NoticeTitle",
+							"value": "Email test 1",
+							"type": "text"
+						},
+						{
+							"key": "NoticeDetail",
+							"value": "description",
+							"type": "text"
+						},
+						{
+							"key": "Createdby",
+							"value": "e7ca2222-182c-4374-86e7-fb1130aee5ab",
+							"type": "text"
+						},
+						{
+							"key": "NoticeDate",
+							"value": "06-04-2020 06:35 PM",
+							"type": "text"
+						},
+						{
+							"key": "GroupID",
+							"value": "124343",
+							"type": "text"
+						},
+						{
+							"key": "IsReply",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "IsSms",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "ParentId",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "FileType",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://echo.echocommunicator.com/service1.svc/CreateNoticeV1",
+					"protocol": "https",
+					"host": [
+						"echo",
+						"echocommunicator",
+						"com"
+					],
+					"path": [
+						"service1.svc",
+						"CreateNoticeV1"
+					],
+					"query": [
+						{
+							"key": "NoticeTitle",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "NoticeDetail",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "Createdby",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "NoticeDate",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "GroupID",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "IsReply",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "IsSms",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "ParentId",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "FileType",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": []
+}

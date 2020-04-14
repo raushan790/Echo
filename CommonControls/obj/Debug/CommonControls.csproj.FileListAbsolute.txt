@@ -496,16 +496,6 @@ C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\CommonControls\obj\Debu
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\CommonControls\obj\Debug\CommonControls.csproj.CopyComplete
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\CommonControls\obj\Debug\CommonControls.dll
 C:\Users\raushan\Documents\My Workspace\echo20\Echo\Echo\CommonControls\obj\Debug\CommonControls.pdb
-D:\RaushanGitHub\Echo\CommonControls\bin\Debug\CommonControls.dll.config
-D:\RaushanGitHub\Echo\CommonControls\bin\Debug\CommonControls.dll
-D:\RaushanGitHub\Echo\CommonControls\bin\Debug\CommonControls.pdb
-D:\RaushanGitHub\Echo\CommonControls\bin\Debug\BusinessObjects.dll
-D:\RaushanGitHub\Echo\CommonControls\bin\Debug\DataObjects.dll
-D:\RaushanGitHub\Echo\CommonControls\bin\Debug\BusinessObjects.pdb
-D:\RaushanGitHub\Echo\CommonControls\bin\Debug\DataObjects.pdb
-D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.csprojResolveAssemblyReference.cache
-D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.dll
-D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.pdb
 D:\Git\Echo\CommonControls\bin\Debug\CommonControls.dll.config
 D:\Git\Echo\CommonControls\bin\Debug\CommonControls.dll
 D:\Git\Echo\CommonControls\bin\Debug\CommonControls.pdb
@@ -517,3 +507,13 @@ D:\Git\Echo\CommonControls\obj\Debug\CommonControls.csprojAssemblyReference.cach
 D:\Git\Echo\CommonControls\obj\Debug\CommonControls.csproj.CopyComplete
 D:\Git\Echo\CommonControls\obj\Debug\CommonControls.dll
 D:\Git\Echo\CommonControls\obj\Debug\CommonControls.pdb
+D:\RaushanGitHub\Echo\CommonControls\bin\Debug\CommonControls.dll.config
+D:\RaushanGitHub\Echo\CommonControls\bin\Debug\CommonControls.dll
+D:\RaushanGitHub\Echo\CommonControls\bin\Debug\CommonControls.pdb
+D:\RaushanGitHub\Echo\CommonControls\bin\Debug\BusinessObjects.dll
+D:\RaushanGitHub\Echo\CommonControls\bin\Debug\DataObjects.dll
+D:\RaushanGitHub\Echo\CommonControls\bin\Debug\BusinessObjects.pdb
+D:\RaushanGitHub\Echo\CommonControls\bin\Debug\DataObjects.pdb
+D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.csprojResolveAssemblyReference.cache
+D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.dll
+D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.pdb
