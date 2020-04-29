@@ -556,6 +556,7 @@ D:\RaushanGitHub\Echo\EchoClassic\bin\System.Web.Providers.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\WebGrease.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\BusinessObjects.pdb
 D:\RaushanGitHub\Echo\EchoClassic\bin\CommonControls.pdb
+D:\RaushanGitHub\Echo\EchoClassic\bin\CommonControls.dll.config
 D:\RaushanGitHub\Echo\EchoClassic\bin\DataObjects.pdb
 D:\RaushanGitHub\Echo\EchoClassic\bin\Google.Apis.pdb
 D:\RaushanGitHub\Echo\EchoClassic\bin\Google.Apis.xml
@@ -595,9 +596,8 @@ D:\RaushanGitHub\Echo\EchoClassic\bin\nl\Hangfire.Core.resources.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\pt-BR\Hangfire.Core.resources.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\zh\Hangfire.Core.resources.dll
 D:\RaushanGitHub\Echo\EchoClassic\bin\zh-TW\Hangfire.Core.resources.dll
-D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.dll
-D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.pdb
 D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.csprojAssemblyReference.cache
 D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.csproj.CoreCompileInputs.cache
-D:\RaushanGitHub\Echo\EchoClassic\bin\CommonControls.dll.config
 D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.csproj.CopyComplete
+D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.dll
+D:\RaushanGitHub\Echo\EchoClassic\obj\Debug\EchoClassic.pdb

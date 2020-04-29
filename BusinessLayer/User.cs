@@ -13,7 +13,7 @@ namespace BusinessObjects
         public User()
         { }
 
-        public User(string _UserID, int _RoleID, string _FirstName, string _LastName, DateTime _DOB, string _EMail, string _PWD, bool _IsDeleted, bool _IsLockedOut, string _CouponCode, string _CreatedBy, DateTime _CreateDate, DateTime _LastLoginDate, DateTime _LastLockoutDate, bool _ChangedPassword, DateTime _LastPasswordChangedDate, string _MobileNo, int _TotalRecord, List<UserGroups> _UserGroup, string _ImageID, string _Custom1, string _Custom2, string _Custom3, string _Custom4, string _Custom5, bool _AlowCredit, string _Facebook, string _Twitter, string _LinkedIn, string _MySpace, string _Session, int _ClientID, bool _IsAdmin)
+        public User(string _UserID, int _RoleID, string _FirstName, string _LastName, DateTime _DOB, string _EMail, string _PWD, bool _IsDeleted, bool _IsLockedOut, string _CouponCode, string _CreatedBy, DateTime _CreateDate, DateTime _LastLoginDate, DateTime _LastLockoutDate, bool _ChangedPassword, DateTime _LastPasswordChangedDate, string _MobileNo, int _TotalRecord, List<UserGroups> _UserGroup, string _ImageID, string _Custom1, string _Custom2, string _Custom3, string _Custom4, string _Custom5, bool _AlowCredit, string _Facebook, string _Twitter, string _LinkedIn, string _MySpace, string _Session, int _ClientID, bool _IsAdmin,string _faceID)
         : this()
         {
             UserID = _UserID;
@@ -52,6 +52,7 @@ namespace BusinessObjects
             Session = _Session;
             ClientID = _ClientID;
             IsAdmin = _IsAdmin;
+            faceID = _faceID;
         }
 
         [DataMember]
@@ -150,7 +151,12 @@ namespace BusinessObjects
         public string Session { get; set; }
         [DataMember]
         public int ClientID { get; set; }
+
         [DataMember]
         public bool IsAdmin { get; set; }
+
+        [DataMember]
+        public string faceID { get; set; }
+        
     }
 }

@@ -229,6 +229,8 @@ D:\RaushanGitHub\Echo\DataLayer\bin\Debug\DataObjects.dll
 D:\RaushanGitHub\Echo\DataLayer\bin\Debug\DataObjects.pdb
 D:\RaushanGitHub\Echo\DataLayer\bin\Debug\BusinessObjects.dll
 D:\RaushanGitHub\Echo\DataLayer\bin\Debug\BusinessObjects.pdb
-D:\RaushanGitHub\Echo\DataLayer\obj\Debug\DataObjects.csprojResolveAssemblyReference.cache
+D:\RaushanGitHub\Echo\DataLayer\obj\Debug\DataObjects.csprojAssemblyReference.cache
+D:\RaushanGitHub\Echo\DataLayer\obj\Debug\DataObjects.csproj.CoreCompileInputs.cache
+D:\RaushanGitHub\Echo\DataLayer\obj\Debug\DataObjects.csproj.CopyComplete
 D:\RaushanGitHub\Echo\DataLayer\obj\Debug\DataObjects.dll
 D:\RaushanGitHub\Echo\DataLayer\obj\Debug\DataObjects.pdb

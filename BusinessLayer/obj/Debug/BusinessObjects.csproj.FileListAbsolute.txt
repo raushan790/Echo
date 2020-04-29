@@ -155,5 +155,7 @@ D:\Git\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
 D:\Git\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb
 D:\RaushanGitHub\Echo\BusinessLayer\bin\Debug\BusinessObjects.dll
 D:\RaushanGitHub\Echo\BusinessLayer\bin\Debug\BusinessObjects.pdb
+D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.csprojAssemblyReference.cache
+D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.csproj.CoreCompileInputs.cache
 D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.dll
 D:\RaushanGitHub\Echo\BusinessLayer\obj\Debug\BusinessObjects.pdb

@@ -47,6 +47,8 @@ D:\RaushanGitHub\Echo\EchoService\bin\BusinessObjects.dll
 D:\RaushanGitHub\Echo\EchoService\bin\DataObjects.dll
 D:\RaushanGitHub\Echo\EchoService\bin\BusinessObjects.pdb
 D:\RaushanGitHub\Echo\EchoService\bin\DataObjects.pdb
-D:\RaushanGitHub\Echo\EchoService\obj\Debug\EchoService.csprojResolveAssemblyReference.cache
+D:\RaushanGitHub\Echo\EchoService\obj\Debug\EchoService.csprojAssemblyReference.cache
+D:\RaushanGitHub\Echo\EchoService\obj\Debug\EchoService.csproj.CoreCompileInputs.cache
+D:\RaushanGitHub\Echo\EchoService\obj\Debug\EchoService.csproj.CopyComplete
 D:\RaushanGitHub\Echo\EchoService\obj\Debug\EchoService.dll
 D:\RaushanGitHub\Echo\EchoService\obj\Debug\EchoService.pdb

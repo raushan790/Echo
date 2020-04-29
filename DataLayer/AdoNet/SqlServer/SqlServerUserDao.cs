@@ -814,6 +814,7 @@ namespace DataObjects.AdoNet.SqlServer
 
                 }
 
+                string _faceID = "";
                 string _Facebook = Convert.ToString(row["Facebook"]);
                 string _Twitter = Convert.ToString(row["Twitter"]);
                 string _LinkedIn = Convert.ToString(row["LinkedIn"]);
@@ -824,7 +825,7 @@ namespace DataObjects.AdoNet.SqlServer
 
 
 
-                return new User(_UserID, _RoleID, _FirstName, _LastName, _DOB, _EMail, _PWD, _IsDeleted, _IsLockedOut, _CouponCode, _CreatedBy, _CreateDate, _LastLoginDate, _LastLockoutDate, _ChangedPassword, _LastPasswordChangedDate, _MobileNo, _TotalRecord, _UserGroup, _ImageID, _Custom1, _Custom2, _Custom3, _Custom4, _Custom5, AlowCredit, _Facebook, _Twitter, _LinkedIn, _MySpace, _Session, _ClientID, IsAdmin);
+                return new User(_UserID, _RoleID, _FirstName, _LastName, _DOB, _EMail, _PWD, _IsDeleted, _IsLockedOut, _CouponCode, _CreatedBy, _CreateDate, _LastLoginDate, _LastLockoutDate, _ChangedPassword, _LastPasswordChangedDate, _MobileNo, _TotalRecord, _UserGroup, _ImageID, _Custom1, _Custom2, _Custom3, _Custom4, _Custom5, AlowCredit, _Facebook, _Twitter, _LinkedIn, _MySpace, _Session, _ClientID, IsAdmin,_faceID);
             }
             catch (Exception ex)
             {
@@ -901,6 +902,11 @@ namespace DataObjects.AdoNet.SqlServer
                 {
 
                 }
+                string _faceID = "";
+                if (row["faceID"] != null)
+                {
+                    _faceID = Convert.ToString(row["faceID"]);
+                }
                 string _Facebook = Convert.ToString(row["Facebook"]);
                 string _Twitter = Convert.ToString(row["Twitter"]);
                 string _LinkedIn = Convert.ToString(row["LinkedIn"]);
@@ -911,7 +917,7 @@ namespace DataObjects.AdoNet.SqlServer
 
 
 
-                return new User(_UserID, _RoleID, _FirstName, _LastName, _DOB, _EMail, _PWD, _IsDeleted, _IsLockedOut, _CouponCode, _CreatedBy, _CreateDate, _LastLoginDate, _LastLockoutDate, _ChangedPassword, _LastPasswordChangedDate, _MobileNo, _TotalRecord, _UserGroup, _ImageID, _Custom1, _Custom2, _Custom3, _Custom4, _Custom5, AlowCredit, _Facebook, _Twitter, _LinkedIn, _MySpace, _Session, _ClientID, IsAdmin);
+                return new User(_UserID, _RoleID, _FirstName, _LastName, _DOB, _EMail, _PWD, _IsDeleted, _IsLockedOut, _CouponCode, _CreatedBy, _CreateDate, _LastLoginDate, _LastLockoutDate, _ChangedPassword, _LastPasswordChangedDate, _MobileNo, _TotalRecord, _UserGroup, _ImageID, _Custom1, _Custom2, _Custom3, _Custom4, _Custom5, AlowCredit, _Facebook, _Twitter, _LinkedIn, _MySpace, _Session, _ClientID, IsAdmin, _faceID);
             }
             catch (Exception ex)
             {

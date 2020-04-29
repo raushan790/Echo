@@ -514,6 +514,8 @@ D:\RaushanGitHub\Echo\CommonControls\bin\Debug\BusinessObjects.dll
 D:\RaushanGitHub\Echo\CommonControls\bin\Debug\DataObjects.dll
 D:\RaushanGitHub\Echo\CommonControls\bin\Debug\BusinessObjects.pdb
 D:\RaushanGitHub\Echo\CommonControls\bin\Debug\DataObjects.pdb
-D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.csprojResolveAssemblyReference.cache
+D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.csprojAssemblyReference.cache
+D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.csproj.CoreCompileInputs.cache
+D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.csproj.CopyComplete
 D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.dll
 D:\RaushanGitHub\Echo\CommonControls\obj\Debug\CommonControls.pdb

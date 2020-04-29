@@ -427,6 +427,8 @@ D:\RaushanGitHub\Echo\EchoWeb\bin\Microsoft.Owin.Security.OAuth.xml
 D:\RaushanGitHub\Echo\EchoWeb\bin\Microsoft.Owin.Security.Google.xml
 D:\RaushanGitHub\Echo\EchoWeb\bin\Microsoft.Owin.Security.Twitter.xml
 D:\RaushanGitHub\Echo\EchoWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\RaushanGitHub\Echo\EchoWeb\obj\Debug\EchoWeb.csprojResolveAssemblyReference.cache
+D:\RaushanGitHub\Echo\EchoWeb\obj\Debug\EchoWeb.csprojAssemblyReference.cache
+D:\RaushanGitHub\Echo\EchoWeb\obj\Debug\EchoWeb.csproj.CoreCompileInputs.cache
+D:\RaushanGitHub\Echo\EchoWeb\obj\Debug\EchoWeb.csproj.CopyComplete
 D:\RaushanGitHub\Echo\EchoWeb\obj\Debug\EchoWeb.dll
 D:\RaushanGitHub\Echo\EchoWeb\obj\Debug\EchoWeb.pdb

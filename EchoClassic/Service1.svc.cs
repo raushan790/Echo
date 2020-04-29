@@ -412,8 +412,8 @@ namespace EchoClassic
                 u = GetUserbyID(n.UserID);
                 if (GroupID != 0)
                 {
-                    string strmessage = "By " + u.FirstName + " on " + n.NoticeDate + ".Notice Title-" + n.NoticeTitle + " Content- " + n.NoticeData;
-
+                    //string strmessage = "By " + u.FirstName + " on " + n.NoticeDate + " " + n.NoticeTitle + ". " + n.NoticeData;
+                    string strmessage = u.FirstName+ "."+ n.NoticeTitle + "." + n.NoticeData;
                     IList<User> userObje = GetGroupMembersforMails(Convert.ToString(GroupID));
                     for (int i = 0; i < userObje.Count; i++)
                     {
@@ -422,11 +422,11 @@ namespace EchoClassic
                         {
                             if (strmessage.Length > 100)
                             {
-                                PostSMS(userObje[i].MobileNo, strmessage.Substring(0, 100) + "Read more" + n.deepLink);
+                                PostSMS(userObje[i].MobileNo, strmessage.Substring(0, 100) + "Read more https://bit.ly/3ays4mo");
                             }
                             else
                             {
-                                PostSMS(userObje[i].MobileNo, strmessage);
+                                PostSMS(userObje[i].MobileNo, strmessage + "https://bit.ly/3ays4mo");
                             }
                         }
                     }
@@ -441,10 +441,21 @@ namespace EchoClassic
 
         public async void SendMail(string EMail, Notice n, string UName)
         {
+            UserGroups ObjUg = new UserGroups();
+            ObjUg = GetUserGroup(Convert.ToString(n.GroupID));
             //var apiKey = "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";//"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";// Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
             string apiKey = "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";
             var client = new SendGridClient(apiKey);
-            string strmessage = "By " + UName + " on " + n.NoticeDate + ".Notice Title-" + n.NoticeTitle + " Content- " + n.NoticeData;
+            //string strmessage = "By " + UName + " on " + n.NoticeDate + ". " + n.NoticeTitle + ". " + n.NoticeData;
+            string strmessage = n.NoticeTitle + " By " + UName + " on " + n.NoticeDate + " " + n.NoticeData;
+            StringBuilder strMessa = new StringBuilder();
+            strMessa.Append("<p>This notice is sent by " + UName + " at "+ n.NoticeDate + " </p>");
+            strMessa.Append("<h3>" + n.NoticeTitle + "</h3>");
+            strMessa.Append("<p>" + n.NoticeData + "</p>");
+            strMessa.Append("<h3>End of notice</h3>");
+            strMessa.Append("<p>To respond to the message, please download EchoApp on your phone</p>");
+            strMessa.Append("<p>Brought to you by EchoApp </p>");
+
             string data = @"{
                           'personalizations': [
                             {
@@ -453,7 +464,7 @@ namespace EchoClassic
                                   'email': '" + EMail + @"'
                                 }
                               ],
-                                'subject': 'Notice Update "+ n.NoticeTitle + " By " + n.UserName + @"' 
+                                'subject': 'Notice on "+ ObjUg.Group_Name + " By " + UName + @"' 
                             }
                           ],
                           'from': {
@@ -461,8 +472,8 @@ namespace EchoClassic
                           },
                           'content': [
                             {
-                              'type': 'text/plain',
-                               'value': '" + strmessage + @"'
+                              'type': 'text/html',
+                               'value': '" + strMessa + @"'
                             }
                           ]
                         }";
@@ -1654,8 +1665,8 @@ namespace EchoClassic
                                     int capacity = ms.Capacity;
                                     byte[] buffer = new byte[capacity];
                                     ms.Read(buffer, 0, buffer.Length);
-                                    BinaryFileName = DateTime.UtcNow.AddHours(5.5).ToString("mmddyyyyhhmmss") + chkUserDetails.UserID.Replace("\r", "");
-                                    chkUserDetails.ImageID = HostingEnvironment.MapPath("~/ProfilePic/" + BinaryFileName);
+                                    BinaryFileName = DateTime.UtcNow.AddHours(5.5).ToString("mmddyyyyhhmmss") + chkUserDetails.UserID + parser.Filename.Replace("\r", "");
+                                    chkUserDetails.ImageID = "https://echo.echocommunicator.com/ProfilePic/" + BinaryFileName;
                                     FileStream f = new FileStream(HostingEnvironment.MapPath("~/ProfilePic/" + BinaryFileName), FileMode.OpenOrCreate);
                                     f.Write(buffer, 0, buffer.Length);
                                     f.Close();
