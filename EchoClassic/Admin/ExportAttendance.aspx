@@ -99,7 +99,7 @@
                                         <li><a href="AttendanceSearch">Attendance Search</a></li>
                                         <li class="active"><a href="#" style="font-weight: bold; background-color: #c7c2c2 !important">Export Attendance</a></li>
                                         <li><a href="summary">Summary</a></li>
-
+                                        <li><a href="viewGroups.aspx">View Notice </a></li>
                                         <li class="">
                                             <a href="javascript:;" class="user-profile dropdown-toggle" style="background-color: #e0e5e6" data-toggle="dropdown" aria-expanded="false">
                                                 <img src="images/user.png" alt="" />Administrator

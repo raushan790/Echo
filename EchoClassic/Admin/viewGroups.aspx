@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AttendanceSearch.aspx.cs" Inherits="EchoClassic.Admin.AttendanceSearch" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="viewGroups.aspx.cs" Inherits="EchoClassic.Admin.viewGroups" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Echo Communicator | Dashboard </title>
+    <title>Echo Communicator | Notice details </title>
     <link href="css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/nprogress/nprogress.css" rel="stylesheet" />
@@ -70,6 +70,10 @@
             -o-border-radius: 50%;
             display: inline-block;
         }
+
+        .table table-striped {
+            margin-left: 300px !important;
+        }
     </style>
 </head>
 <body class="nav-md" style="background-color: white;">
@@ -101,18 +105,23 @@
                                     </button>
                                 </div>
                                 <div id="navbar6" class="navbar-collapse collapse" style="background-color: #dedcdc;">
-                                    <ul class="nav navbar-nav navbar-right" style="margin-left: 0px; position: relative; background-color: #e0e5e6; z-index: 1">
+                                    <ul class="nav navbar-nav navbar-right" style="margin-left: 0px; position: relative;
+                                        background-color: #e0e5e6; z-index: 1">
                                         <li><a href="su-dashboard">Dashboard Home</a></li>
-                                        <li class="active"><a href="#" style="font-weight: bold; background-color: #c7c2c2 !important">Attendance Search</a></li>
-                                       <li><a href="ExportAttendance">Export Attendance</a></li>
+                                        <li><a href="AttendanceSearch">Attendance Search</a></li>
+                                        <li><a href="ExportAttendance">Export Attendance</a></li>
                                         <li><a href="summary">Summary</a></li>
-                                       <li><a href="viewGroups">View Notice </a></li>
+                                        <li class="active"><a href="viewGroups" style="font-weight: bold; background-color: #c7c2c2 !important">
+                                            View Notice</a></li>
+<%--                                        <li class="active"><a href="viewGroups.aspx">View Notice </a></li>--%>
                                         <li class="">
-                                            <a href="javascript:;" class="user-profile dropdown-toggle" style="background-color: #e0e5e6" data-toggle="dropdown" aria-expanded="false">
+                                            <a href="javascript:;" class="user-profile dropdown-toggle" style="background-color: #e0e5e6"
+                                                data-toggle="dropdown" aria-expanded="false">
                                                 <img src="images/user.png" alt="" />Administrator
                                         <span class=" fa fa-angle-down"></span>
                                             </a>
-                                            <ul class="dropdown-menu dropdown-usermenu pull-right" style="background-color: #e0e5e6; z-index: 1">
+                                            <ul class="dropdown-menu dropdown-usermenu pull-right" style="background-color: #e0e5e6;
+                                                z-index: 1">
                                                 <li><a href="javascript:;">Profile</a></li>
 
                                                 <li><a href="../contact">Help</a></li>
@@ -132,14 +141,16 @@
             <div class="row" style="margin-right: 1px; margin-bottom: 10px">
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <h1 style="color: #0d0c0c">
-                        <asp:Image ID="imgGroup" Style="width: 180px; margin-left: 72px; margin-top: -5px;" runat="server" CssClass="img-responsive" />
+                        <asp:Image ID="imgGroup" Style="width: 180px; margin-left: 72px; margin-top: -5px;"
+                            runat="server" CssClass="img-responsive" />
                         <asp:Literal ID="litSchoolName" runat="server"></asp:Literal></h1>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <asp:UpdatePanel ID="upLiveAttendance" UpdateMode="Conditional" runat="server">
                         <ContentTemplate>
 
-                            <div class="x_panel tile fixed_height_100" align="center" style="border-radius: 25px; box-shadow: 3px 4px 10px 2px; font-weight: bold; background-color: #228b22;">
+                            <div class="x_panel tile fixed_height_100" align="center" style="border-radius: 25px;
+                                box-shadow: 3px 4px 10px 2px; font-weight: bold; background-color: #228b22;">
                                 <div class="x_title">
                                     <h2 style="color: white;">Live Attendance Counter</h2>
                                     <div class="clearfix"></div>
@@ -159,19 +170,21 @@
                     </asp:UpdatePanel>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="x_panel tile fixed_height_100" align="center" style="box-shadow: 3px 4px 10px 2px; font-weight: bold; border-radius: 25px; background-color: darkgray;">
+                    <div class="x_panel tile fixed_height_100" align="center" style="box-shadow: 3px 4px 10px 2px;
+                        font-weight: bold; border-radius: 25px; background-color: darkgray;">
                         <div class="x_title">
-                            <h2 style="color: white;">Number of Groups</h2>
+                            <h2 style="color: white;">Number of Notices</h2>
                             <div class="clearfix"></div>
                         </div>
                         <h3 style="font-weight: bold" class="counter-count1">
-                            <asp:Literal ID="litClassesCount" runat="server"></asp:Literal>
+                            <asp:Literal ID="litNoticeCount" runat="server"></asp:Literal>
                         </h3>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="x_panel tile fixed_height_100" align="center" style="border-radius: 25px; box-shadow: 3px 4px 10px 2px; font-weight: bold; background-color: #9a0543;">
+                    <div class="x_panel tile fixed_height_100" align="center" style="border-radius: 25px;
+                        box-shadow: 3px 4px 10px 2px; font-weight: bold; background-color: #9a0543;">
                         <div class="x_title">
                             <h2 style="color: white;">Installation Report</h2>
                             <div class="clearfix"></div>
@@ -195,26 +208,21 @@
                                     <div class="row x_title">
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
-                                            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-12">
-                                                <h3>Select Date:</h3>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                                                 <div class="form-group row">
                                                     <div class="form-group">
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                            <asp:TextBox ID="txtDateFrom" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="FromDateChanged"> 
+                                                            <asp:TextBox ID="txtDateFrom" runat="server" CssClass="form-control" AutoPostBack="true"
+                                                                OnTextChanged="FromDateChanged"> 
                                                             </asp:TextBox>
                                                             <ajaxToolkit:CalendarExtender ID="calEFromDate" runat="server" TargetControlID="txtDateFrom" />
 
                                                         </div>
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                            <asp:TextBox ID="txtDateTo" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="ToDateChanged">   
+                                                            <asp:TextBox ID="txtDateTo" runat="server" CssClass="form-control" AutoPostBack="true"
+                                                                OnTextChanged="ToDateChanged">   
                                                             </asp:TextBox>
                                                             <ajaxToolkit:CalendarExtender ID="CalETodate" runat="server" TargetControlID="txtDateTo" />
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -223,15 +231,8 @@
                                                 <div class="form-group row">
                                                     <div class="form-group">
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                            <asp:DropDownList ID="ddlClass" AutoPostBack="true" OnSelectedIndexChanged="ddlClassSelectedIndexChanged" runat="server" CssClass="form-control">
-                                                                <asp:ListItem Text="MBBS 1st Year" Value="MBBS 1st Year"></asp:ListItem>
-                                                            </asp:DropDownList>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                            <asp:DropDownList ID="ddlSubject" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlSubjectSelectedIndexChanged">
-                                                                <asp:ListItem Text="Anatomy" Value="121892"></asp:ListItem>
-                                                                <asp:ListItem Text="Biochemistry" Value="121893"></asp:ListItem>
-                                                                <asp:ListItem Text="Physiology" Value="121894"></asp:ListItem>
+                                                            <asp:DropDownList ID="ddlClass" AutoPostBack="true" OnSelectedIndexChanged="ddlClassSelectedIndexChanged"
+                                                                runat="server" CssClass="form-control">
                                                             </asp:DropDownList>
                                                         </div>
                                                     </div>
@@ -244,74 +245,20 @@
                             </div>
                         </div>
                         <hr />
-                        <asp:Panel ID="pnlNormalAttendance" runat="server" Visible="false">
+                        <asp:Panel ID="pnlNormalAttendance" runat="server" Visible="true">
                             <div class="row">
                                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
-                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-12">
-                                    <h3>Attendance Status:</h3>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                    <h3>
+                                    Bulletin :
                                 </div>
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
                             </div>
                             <div class="row" style="overflow-y: scroll; max-height: 300px;">
                                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
                                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <asp:GridView ID="gvAttendanceStatus" runat="server" Style="box-shadow: 0px 1px 6px 1px; width: 100%"
-                                        CssClass="table table-striped table-fit" AutoGenerateColumns="false"
-                                        OnRowDataBound="gvAttendanceStatus_Databound"
-                                        OnRowCommand="gvAttendanceStatus_RowCommand">
-                                        <Columns>
-                                            <asp:TemplateField HeaderText="SLNo.">
-                                                <ItemTemplate>
-                                                    <asp:Label ID="SLNo" runat="server" Text='<%# Container.DataItemIndex + 1 %>'></asp:Label>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Student Name">
-                                                <ItemTemplate>
-                                                    <asp:LinkButton ID="lnkStudentName" CommandName="ViewDetails" CommandArgument='<%#Eval("UserID") %>' runat="server" Text='<%#Eval("UDF2") %>'></asp:LinkButton>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-
-                                            <asp:TemplateField HeaderText="No. of days Present">
-                                                <ItemTemplate>
-                                                    <asp:LinkButton ID="lnkTotalPresent" CommandName="ViewDetails" CommandArgument='<%#Eval("UserID") %>' runat="server" Text='<%#Eval("PresentCount") %>'></asp:LinkButton>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Overall Classes">
-                                                <ItemTemplate>
-                                                    <asp:Label ID="lblTotalClasses" runat="server"></asp:Label>
-
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Overall Percentage">
-                                                <ItemTemplate>
-                                                    <asp:Label ID="lblPercent" runat="server"></asp:Label>
-
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-
-                                            <asp:TemplateField HeaderText="Overall fulfilled">
-                                                <ItemTemplate>
-                                                    <asp:Label ID="lblMin" Text="Yes" runat="server"></asp:Label>
-
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                        </Columns>
-                                    </asp:GridView>
-                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
-                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-12">
-                                    <h3>Attendance Details for:
-                                            <asp:Literal ID="litStudentName" runat="server"></asp:Literal></h3>
-                                </div>
-                            </div>
-                            <div class="row" style="overflow-y: scroll; max-height: 300px;">
-                                <%--btn <asp:Button ID="btnPrintDistrict" runat="server" Text="Print" OnClientClick="PrintPage();" />
-                                --%>
-                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <asp:GridView ID="gvAttendanceDetails" runat="server" Style="box-shadow: 0px 1px 6px 1px; width: 100%"
+                                    <asp:GridView ID="gvAttendanceDetails" runat="server" Style="margin-right: 100px !important;
+                                        box-shadow: 0px 1px 6px 1px; width: 100%"
                                         CssClass="table table-striped" AutoGenerateColumns="false">
                                         <Columns>
                                             <asp:TemplateField HeaderText="SLNo.">
@@ -319,84 +266,80 @@
                                                     <asp:Label ID="SLNo" runat="server" Text='<%# Container.DataItemIndex + 1 %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Attendance Date">
+                                            <asp:TemplateField HeaderText="Date">
                                                 <ItemTemplate>
-                                                    <asp:Label ID="lblAttendanceDate" runat="server"
-                                                        Text='<%#Convert.ToDateTime( Eval("AttendanceDate")).Date.ToShortDateString() %>'></asp:Label>
-
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Attendance Time">
-                                                <ItemTemplate>
-                                                    <asp:Label ID="lblAttendanceTime" runat="server" Text='<%#Eval("AttendanceTime") %>'></asp:Label>
-
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Device">
-                                                <ItemTemplate>
-                                                    <asp:Label ID="lblDevice" runat="server" Text='<%#Eval("Device") %>'></asp:Label>
-
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Location">
-                                                <ItemTemplate>
-                                                    <asp:Label ID="lblLocation" runat="server" Text='<%#Eval("Location") %>'></asp:Label>
-
+                                                    <asp:Label Width="100%" ID="lblNoticeDate" runat="server" Text='<%#Eval("NoticeDate") %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
 
+                                            <asp:TemplateField HeaderText="Group Name">
+                                                <ItemTemplate>
+                                                    <asp:Label Width="100%" ID="lblGroupName" runat="server" Text='<%#Eval("GroupName") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                           <asp:TemplateField HeaderText="Description">
+                                                <ItemTemplate>
+                                                    <asp:Label Width="100%" ID="lblDescription" runat="server" Text='<%#Eval("Description") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="Title">
+                                                <ItemTemplate>
+                                                    <asp:Label Width="100%" ID="lblNoticeTitle" runat="server" Text='<%#Eval("NoticeTitle") %>'></asp:Label>
 
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="Detail">
+                                                <ItemTemplate>
+                                                    <asp:Label Width="100%" ID="lblDevice" runat="server" Text='<%#Eval("NoticeDetail") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
                                         </Columns>
                                     </asp:GridView>
                                 </div>
+
                                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
                             </div>
                         </asp:Panel>
-                        <asp:Panel ID="pnlCheckinCheckout" runat="server" Visible="false">
+                        <asp:Panel ID="Panel1" runat="server" Visible="true">
+                            <div class="row">
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                                    <h3>
+No New Notices:                                </div>
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
+                            </div>
                             <div class="row" style="overflow-y: scroll; max-height: 300px;">
                                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
                                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <h3>Checkin, Checkout</h3>
-                                    <asp:GridView ID="gvCheckinCheckoutData" runat="server" Style="box-shadow: 0px 1px 6px 1px; width: 100%"
-                                        CssClass="table table-striped table-fit" AutoGenerateColumns="false"
-                                        OnRowDataBound="gvCheckinCheckoutData_Databound" OnRowCommand="gvAttendanceStatus_RowCommand">
+                                    <asp:GridView ID="gvGroupDetails" runat="server" Style="
+                                        box-shadow: 0px 1px 6px 1px; width: 100%"
+                                        CssClass="table table-striped" AutoGenerateColumns="false">
                                         <Columns>
                                             <asp:TemplateField HeaderText="SLNo.">
                                                 <ItemTemplate>
-                                                    <asp:Label ID="SLNo" runat="server" Text='<%# Container.DataItemIndex + 1 %>'></asp:Label>
+                                                    <asp:Label Width="100%" ID="SLNo" runat="server" Text='<%# Container.DataItemIndex + 1 %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Name">
+                                            <asp:TemplateField HeaderText="Date" >
                                                 <ItemTemplate>
-                                                    <asp:Label ID="lblName" runat="server" Text='<%#Eval("udf2") %>'></asp:Label>
+                                                    <asp:Label Width="100%" ID="lblNoticeDate" runat="server" Text='<%#Eval("NoticeDate") %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Status">
+                                            <asp:TemplateField HeaderText="Group Name">
                                                 <ItemTemplate>
-                                                    <asp:Label ID="lblpres" runat="server" Text="Present"></asp:Label>
+                                                    <asp:Label Width="100%" ID="lblGroupName" runat="server" Text='<%#Eval("GroupName") %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Checked-in At">
+                                            <asp:TemplateField HeaderText="Description">
                                                 <ItemTemplate>
-                                                    <asp:Label ID="lblCheckin" runat="server" Text='<%#Eval("CheckinDate") %>'></asp:Label>
+                                                    <asp:Label Width="100%" ID="lblDescription" runat="server" Text='<%#Eval("Description") %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Checked-out At">
-                                                <ItemTemplate>
-                                                    <asp:Label ID="lblCheckout" runat="server" Text='<%#Eval("CheckoutDate") %>'></asp:Label>
-
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Working hours">
-                                                <ItemTemplate>
-                                                    <asp:Label ID="lblWorkingHours" runat="server"></asp:Label>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-
                                         </Columns>
                                     </asp:GridView>
-                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
                                 </div>
+                                </div>
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">&nbsp</div>
                             </div>
                         </asp:Panel>
 
@@ -464,3 +407,4 @@
     </form>
 </body>
 </html>
+

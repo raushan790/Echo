@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
-using BusinessObjects;
+﻿using BusinessObjects;
 using DataObjects;
-using System.Collections.Specialized;
-using System.Web.Hosting;
-using System.IO;
-using System.Data.SqlClient;
-using System.Configuration;
-using System.Data;
-using System.Web;
-using System.Drawing.Imaging;
-using System.Drawing;
-using EchoClassic.DataContract;
 using DataObjects.AdoNet;
-using System.ServiceModel.Web;
-using System.Net;
-using System.Threading;
-using System.Web.Script.Serialization;
-using SendGrid;
+using EchoClassic.DataContract;
 using Newtonsoft.Json;
+using SendGrid;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.ServiceModel.Web;
+using System.Text;
+using System.Threading;
+using System.Web.Hosting;
+using System.Web.Script.Serialization;
 
 namespace EchoClassic
 {
@@ -259,10 +254,9 @@ namespace EchoClassic
         }
         public Notice CreateNoticeV1(Stream StreamWithData)
         {
-
             IList<string> UserIDList = null;
             int GroupID = 0;
-
+            List<string> files = new List<string>();
             string UserIDs = string.Empty;
             string NoticeTitle = string.Empty;
             string NoticeDetail = string.Empty;
@@ -355,8 +349,6 @@ namespace EchoClassic
                     }
                     if (parser.FileContents!=null)
                     {
-
-
                         if (parser.FileContents.Length > 0)
                         {
                             if (parser.Filename != string.Empty)
@@ -367,6 +359,7 @@ namespace EchoClassic
                                     byte[] buffer = new byte[capacity];
                                     ms.Read(buffer, 0, buffer.Length);
                                     BinaryFileName = DateTime.UtcNow.AddHours(5.5).ToString("mmddyyyyhhmmss") + parser.Filename.Replace("\r", "");
+                                    files.Add("https://echo.echocommunicator.com/ProfilePic/" + BinaryFileName);
 
                                     FileStream f = new FileStream(HostingEnvironment.MapPath("~/NoticeData/" + BinaryFileName), FileMode.OpenOrCreate);
                                     f.Write(buffer, 0, buffer.Length);
@@ -396,7 +389,7 @@ namespace EchoClassic
                     n.IsReply = IsReply;
                     n.deepLink = strdeepLink;
                 }
-                smail(GroupID, n);
+                Smail(GroupID, n, files);
             }
             catch (Exception ex)
             {
@@ -404,7 +397,7 @@ namespace EchoClassic
             }
             return n;
         }
-        public void smail(int GroupID, Notice n)
+        public void Smail(int GroupID, Notice n, List<string> files)
         {
             try
             {
@@ -413,20 +406,21 @@ namespace EchoClassic
                 if (GroupID != 0)
                 {
                     //string strmessage = "By " + u.FirstName + " on " + n.NoticeDate + " " + n.NoticeTitle + ". " + n.NoticeData;
-                    string strmessage = u.FirstName+ "."+ n.NoticeTitle + "." + n.NoticeData;
+                    string strmessage = u.FirstName+ ">"+ n.NoticeTitle + ">" + n.NoticeData;
                     IList<User> userObje = GetGroupMembersforMails(Convert.ToString(GroupID));
                     for (int i = 0; i < userObje.Count; i++)
                     {
-                        SendMail(userObje[i].EMail, n, u.FirstName);
+                        sendEmailNew(userObje[i].EMail, n, u.FirstName,files);
+                        //sendEmailNew(userObje[i].EMail, n, u.FirstName);
                         if (n.IsSms == 1)
                         {
                             if (strmessage.Length > 100)
                             {
-                                PostSMS(userObje[i].MobileNo, strmessage.Substring(0, 100) + "Read more https://bit.ly/3ays4mo");
+                                PostSMS(userObje[i].MobileNo, strmessage.Substring(0, 100) + "Read more at https://bit.ly/3ays4mo");
                             }
                             else
                             {
-                                PostSMS(userObje[i].MobileNo, strmessage + "https://bit.ly/3ays4mo");
+                                PostSMS(userObje[i].MobileNo, strmessage + " https://bit.ly/3ays4mo");
                             }
                         }
                     }
@@ -436,6 +430,54 @@ namespace EchoClassic
             catch(Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void  sendEmailNew(string EMail, Notice n, string UName, List<string> files)
+        {
+            try
+            {
+                UserGroups ObjUg = new UserGroups();
+                ObjUg = GetUserGroup(Convert.ToString(n.GroupID));
+                string strmessage = n.NoticeTitle + " By " + UName + " on " + n.NoticeDate + " " + n.NoticeData;
+                StringBuilder strMessa = new StringBuilder();
+                strMessa.Append("<p>This notice is sent by " + UName + " at " + n.NoticeDate + " </p>");
+                strMessa.Append("<h3>" + n.NoticeTitle + "</h3>");
+                strMessa.Append("<p>" + n.NoticeData + "</p>");
+                strMessa.Append("<h3>End of notice</h3>");
+                strMessa.Append("<p>To respond to the message, please download EchoApp on your phone</p>");
+                strMessa.Append("<p>Brought to you by EchoApp </p>");
+
+                MailMessage MailMsg = new MailMessage(new MailAddress("notice@echocommunicator.com"), new MailAddress(EMail));
+                MailMsg.BodyEncoding = Encoding.Default;
+                MailMsg.Subject = "Notice on "+ ObjUg.Group_Name + " By " + UName ;
+                MailMsg.Body = strMessa.ToString();
+                MailMsg.Priority = MailPriority.High;
+                MailMsg.IsBodyHtml = true;
+                System.Net.Mail.Attachment attachment;
+                if (files.Count > 0)
+                {
+                    for (int i = 0; i <= files.Count; i++)
+                    {
+                        attachment = new System.Net.Mail.Attachment(files[i]);
+                        MailMsg.Attachments.Add(attachment);
+                    }
+                }
+                SmtpClient SmtpMail = new SmtpClient();
+                System.Net.NetworkCredential basicAuthenticationInfo = new System.Net.NetworkCredential("notice@echocommunicator.com", "EcrTech01%%");
+
+                // 'IMPORANT:  Your smtp login email MUST be same as your FROM address.
+                SmtpMail.Host = "mail.echocommunicator.com";
+                SmtpMail.UseDefaultCredentials = false;
+                SmtpMail.Credentials = basicAuthenticationInfo;
+                SmtpMail.Port = 25;
+                SmtpMail.EnableSsl = false;
+
+                SmtpMail.Send(MailMsg);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
             }
         }
 
@@ -495,17 +537,18 @@ namespace EchoClassic
             return 0;
         }
 
-        public Dictionary<int,int> GetUnreadNoticeCount(string UserId)
+        public Dictionary<int,string> GetUnreadNoticeCount(string UserId)
         {
             DataSet ds = DataAccess.NoticeDao.GetUnreadNoticeCount(UserId);
-            Dictionary<int, int> NoticeCount = new Dictionary<int, int>();
+            Dictionary<int, string> NoticeCount = new Dictionary<int, string>();
             if (ds.Tables[0].Rows.Count > 0)
             {
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     int groupID = dr.Field<int>("GroupID");
                     int count = dr.Field<int>("UnreadCount");
-                    NoticeCount.Add(groupID, count);
+                    string LastMessage = dr.Field<string>("message"); 
+                    NoticeCount.Add(groupID, count+"~"+LastMessage);
                 }
             }
             return NoticeCount;
@@ -1595,6 +1638,58 @@ namespace EchoClassic
             }
         }
 
+        public string Lastmess(string GroupID)
+        {
+            string LastMessage = "";
+                DataSet ds = DataAccess.NoticeDao.GetLastReadMessage(Convert.ToString(GroupID));
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        LastMessage = dr.Field<string>("message");
+                    }
+                }
+
+                return LastMessage;
+        }
+
+        public string GetLastmessage(string GroupId)
+        {
+            try
+            {
+                string LastMessage = "";
+                DataSet ds = DataAccess.NoticeDao.GetLastReadMessage(Convert.ToString(GroupId));
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        LastMessage = dr.Field<string>("message");
+                    }
+                }
+                return LastMessage;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
+        public User GetReadUsers(string GroupID)
+        {
+            try
+            {
+                User chkUserDetails = new User();
+                chkUserDetails = DataAccess.UserDao.GetUser(GroupID);
+                return chkUserDetails;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public string SetUser(Stream StreamWithData)
         {
             try
@@ -1799,7 +1894,14 @@ namespace EchoClassic
                     UserGroupMapping m = new UserGroupMapping();
                     m.UserID = userID;
                     m.UserGroupID = GroupID;
-                    m.isAdmin = IsAdmin;
+                    if (u.RoleID == 2 || u.RoleID == 0)
+                    {
+                        m.isAdmin = true;
+                    }
+                    else
+                    {
+                        m.isAdmin = IsAdmin;
+                    }
                     m.SerialNoForGroup = u.Custom1;
                     DataAccess.UserGroupMappingDao.CreateMapping(m);
                 }
@@ -1808,7 +1910,14 @@ namespace EchoClassic
                     UserGroupMapping m = new UserGroupMapping();
                     m.UserID = user.UserID;
                     m.UserGroupID = GroupID;
-                    m.isAdmin = IsAdmin;
+                    if (u.RoleID == 2 || u.RoleID == 0)
+                    {
+                        m.isAdmin = true;
+                    }
+                    else
+                    {
+                        m.isAdmin = IsAdmin;
+                    }
                     m.SerialNoForGroup = u.Custom1;
                     DataAccess.UserGroupMappingDao.DeleteMapping(user.UserID, GroupID);
                     DataAccess.UserGroupMappingDao.CreateMapping(m);

@@ -135,7 +135,7 @@ namespace EchoClassic
        RequestFormat = WebMessageFormat.Json,
        ResponseFormat = WebMessageFormat.Json,
         UriTemplate = "/GetUnreadNoticeCount")]
-        Dictionary<int, int> GetUnreadNoticeCount(string UserID);
+        Dictionary<int, string> GetUnreadNoticeCount(string UserID);
 
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped, Method = "POST",
@@ -572,5 +572,28 @@ namespace EchoClassic
             UriTemplate = "/AddUserToGroup")]
         string AddUserToGroup(int GroupId, int ClientId, string MobileNo, string Session, bool IsAdmin);
 
+        
+       [OperationContract]
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped, Method = "Post",
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json,
+            UriTemplate = "/Lastmess")]
+        string Lastmess(string GroupId);
+
+        [OperationContract]
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped, Method = "GET",
+    RequestFormat = WebMessageFormat.Json,
+    ResponseFormat = WebMessageFormat.Json,
+    UriTemplate = "/GetLastmessage/{GroupID}")]
+        string GetLastmessage(string GroupId);
+
+
+
+        [OperationContract]
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped, Method = "GET",
+             RequestFormat = WebMessageFormat.Json,
+             ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "/GetReadUsers/{GroupID}")]
+        User GetReadUsers(string GroupID);
     }
 }

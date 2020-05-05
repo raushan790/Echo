@@ -329,6 +329,7 @@
     <Content Include="Admin\New-Dashboard.aspx" />
     <Content Include="Admin\AttendanceExportPaging.aspx" />
     <Content Include="Admin\Su-Dashboard.aspx" />
+    <Content Include="Admin\viewGroups.aspx" />
     <Content Include="Admin\ViewMember.aspx" />
     <Content Include="Benefits.aspx" />
     <Content Include="bin\log4net.dll" />
@@ -806,6 +807,13 @@
     </Compile>
     <Compile Include="Admin\Su-Dashboard.aspx.designer.cs">
       <DependentUpon>Su-Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\viewGroups.aspx.cs">
+      <DependentUpon>viewGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\viewGroups.aspx.designer.cs">
+      <DependentUpon>viewGroups.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ViewMember.aspx.cs">
       <DependentUpon>ViewMember.aspx</DependentUpon>

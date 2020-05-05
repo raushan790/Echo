@@ -160,7 +160,7 @@
     </div>
     <div class="container">
         <section>
-            <%--<div class="col-md-12">
+            <div class="col-md-12">
                     <hr>
                     <div class="row">
                         <div class="col-md-6">
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                     </div>
-                </div>--%>
+                </div>
             <hr />
             <div class="row">
                 <div class="container">

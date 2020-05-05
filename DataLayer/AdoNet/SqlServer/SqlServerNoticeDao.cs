@@ -102,6 +102,21 @@ namespace DataObjects.AdoNet.SqlServer
                 throw ex;
             }
         }
+        
+       public DataSet GetLastReadMessage(string GroupID)
+        {
+            try
+            {
+                SqlParameter[] m = new SqlParameter[1];
+                m[0] = new SqlParameter("@groupid", GroupID);
+                DataSet ds = SqlHelper.ExecuteDataset(Connection.Connection_string, CommandType.StoredProcedure, "SelectLastReadMessage", m);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public DataSet GetUnreadNoticeCount(string UserID)
         {
